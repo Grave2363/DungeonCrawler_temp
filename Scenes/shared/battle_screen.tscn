@@ -21,6 +21,7 @@ offset_bottom = 156.0
 text = "Battle Demo"
 
 [node name="Attack" type="Button" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 979.0
 offset_top = 7.0
@@ -29,6 +30,7 @@ offset_bottom = 38.0
 text = "Attacks"
 
 [node name="Run" type="Button" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 1087.0
 offset_top = 6.0
@@ -37,6 +39,7 @@ offset_bottom = 37.0
 text = "Flee"
 
 [node name="Guard" type="Button" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 981.0
 offset_top = 49.0

@@ -14,6 +14,10 @@ func _process(delta):
 func _on_run_pressed():
 	emit_signal("running")
 	command_disable()
+func display_combat():
+	$Panel/Attack.visible = !$Panel/Attack.visible
+	$Panel/Run.visible = !$Panel/Run.visible
+	$Panel/Guard.visible = !$Panel/Guard.visible
 
 func command_disable():
 	$Panel/Attack.visible = !$Panel/Attack.visible

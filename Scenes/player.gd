@@ -6,7 +6,7 @@ var tween
 var tween_running = false
 const travel_time = 0.3
 var dir = Vector3(0,0,0)
-var inFight = true
+var inFight = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -14,7 +14,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+func start_fight():
+	inFight = true
 func _physics_process(delta):
 	if tween_running == true or inFight == true:
 		return
