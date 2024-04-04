@@ -19,8 +19,8 @@ signal HealthEmpty()
 @export var itemScene : PackedScene
 
 func _ready():
-	stats.initalize(startingStats, equipedWep)
-	wep.initalize(equipedWep)
+	stats.initialize(startingStats, equipedWep)
+	wep.initialize(equipedWep)
 	if StartingSkills != null and StartingSkills.size() > 0:
 		for skill in StartingSkills :
 			var newSkill = characterSkillScene.instantiate()

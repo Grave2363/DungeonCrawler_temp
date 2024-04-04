@@ -7,7 +7,7 @@ var WepDis : String = "What is this?"
 var atk : int
 var mAtk : int
 
-func initalize (wep :WepBase):
+func initialize (wep :WepBase):
 	WepName = wep.WepName
 	WepDis = wep.WepDis
 	atk = wep.atk
