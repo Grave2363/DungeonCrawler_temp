@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://cofk61p57652h"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_ha1ew"]
+
+[resource]
+script = ExtResource("1_ha1ew")
+WepName = "Bone"
+WepDis = "A sharp bone, like a spear but not"
+atk = 3
+mAtk = 0

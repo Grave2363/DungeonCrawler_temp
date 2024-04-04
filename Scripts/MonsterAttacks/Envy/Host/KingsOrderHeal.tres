@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://c0f8g45fn3834"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_grr7l"]
+
+[resource]
+script = ExtResource("1_grr7l")
+skillName = "Mending Order"
+skillDis = "The King orders the dead to offer their flesh to heal whoever he wants"
+dmgType = "Physical"
+healing = 20
+mpCost = 0
+power = 0
+hitChance = 0
+targetable = true

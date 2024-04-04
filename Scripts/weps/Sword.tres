@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://bb0clwfeudf15"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_p5hpx"]
+
+[resource]
+script = ExtResource("1_p5hpx")
+WepName = "Standard Sword"
+WepDis = "The first weapon for many a Crusader"
+atk = 5
+mAtk = 0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://lyurblnu7d2e"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_rc4ls"]
+
+[resource]
+script = ExtResource("1_rc4ls")
+WepName = "Demoness' Claws"
+WepDis = "Basic Succubus claws, sharp elongated nails for both ladies of the night and vitality succers"
+atk = 2
+mAtk = 4

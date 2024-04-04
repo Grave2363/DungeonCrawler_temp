@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://2bloo2fueyvg"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_wm5q5"]
+
+[resource]
+script = ExtResource("1_wm5q5")
+WepName = "Glimering Claws"
+WepDis = "Claws belonging to the dragon of Greed, tails say the dragon was once a king before the demons appeared in the world of man"
+atk = 5
+mAtk = 0

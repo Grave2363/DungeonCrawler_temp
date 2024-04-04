@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://drvwwue8dlmpf"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_hrwux"]
+
+[resource]
+script = ExtResource("1_hrwux")
+skillName = "Vicious Mockery"
+skillDis = "The Skull mocks the player "
+dmgType = "Magical"
+healing = 0
+mpCost = 1
+power = 1
+hitChance = 0

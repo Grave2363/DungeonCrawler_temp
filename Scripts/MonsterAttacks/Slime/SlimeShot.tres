@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cf0kp2ypgg34s"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_st1x4"]
+
+[resource]
+script = ExtResource("1_st1x4")
+skillName = "Slime Shot"
+skillDis = "Blasts target with slime"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 3
+hitChance = 85

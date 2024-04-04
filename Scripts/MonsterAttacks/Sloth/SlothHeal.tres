@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://b87rwnfal1e1q"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_myx1b"]
+
+[resource]
+script = ExtResource("1_myx1b")
+skillName = "Let Me Sleep"
+skillDis = "Sloth does what it does best, sleep for a short time to heal"
+dmgType = "Physical"
+healing = 40
+mpCost = 5
+power = 0
+hitChance = 100

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://d2fr67k3bf5j2"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_e725q"]
+
+[resource]
+script = ExtResource("1_e725q")
+job_name = "Skeleton Naga"
+max_HP = 25
+max_Mp = 40
+atk = 2
+def = 4
+mDef = 1
+mAtk = 1
+spd = 8
+pureSoul = 0
+darkSoul = 0
+isPlayer = false

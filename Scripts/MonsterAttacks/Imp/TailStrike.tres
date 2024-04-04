@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cl5lpfsq8g4he"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_52f2q"]
+
+[resource]
+script = ExtResource("1_52f2q")
+skillName = "Tail Strike"
+skillDis = "Imp strikes target with his tail"
+dmgType = "Physical"
+healing = 0
+mpCost = 5
+power = 3
+hitChance = 100

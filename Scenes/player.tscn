@@ -12,3 +12,30 @@ target_position = Vector3(0, 0, 2)
 
 [node name="RayFront" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryPopUp" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_left = 287.0
+offset_top = 186.0
+offset_right = 572.0
+offset_bottom = 306.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/InventoryPopUp"]
+layout_mode = 2
+offset_left = 83.0
+offset_top = 36.0
+offset_right = 215.0
+offset_bottom = 70.0
+text = "This is a Test"
+
+[node name="Button" type="Button" parent="CanvasLayer/InventoryPopUp"]
+layout_mode = 2
+offset_left = 168.0
+offset_top = 84.0
+offset_right = 283.0
+offset_bottom = 115.0
+text = "Close"
+
+[connection signal="pressed" from="CanvasLayer/InventoryPopUp/Button" to="." method="_on_button_pressed"]

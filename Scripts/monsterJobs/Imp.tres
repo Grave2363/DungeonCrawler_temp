@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://dbiok5e7brutr"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_eng81"]
+
+[resource]
+script = ExtResource("1_eng81")
+job_name = "Lesser Imp"
+max_HP = 10
+max_Mp = 30
+atk = 1
+def = 1
+mDef = 1
+mAtk = 1
+spd = 7
+pureSoul = 0
+darkSoul = 0
+isPlayer = false

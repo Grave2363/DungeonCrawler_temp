@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bab7ai1tdyxnn"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/CharacterSkill.gd" id="1_inem4"]
+
+[node name="CharacterSkill" type="Node"]
+script = ExtResource("1_inem4")

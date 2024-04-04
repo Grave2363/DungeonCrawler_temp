@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://bokw2fo5krcxi"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_o32mu"]
+
+[resource]
+script = ExtResource("1_o32mu")
+WepName = "Imp Claws"
+WepDis = "well there claws that belong to and are attached to the imp"
+atk = 2
+mAtk = 0

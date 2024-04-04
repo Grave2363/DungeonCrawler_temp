@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://d2dbog60mq61b"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_tf4js"]
+
+[resource]
+script = ExtResource("1_tf4js")
+skillName = "Guardian's Saber"
+skillDis = "Strikes the player with a rusted sword"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 3
+hitChance = 0
+targetable = false

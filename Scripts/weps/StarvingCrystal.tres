@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://co1q5fbyd75xq"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_ajcp5"]
+
+[resource]
+script = ExtResource("1_ajcp5")
+WepName = "Starving Crystal"
+WepDis = "Your blade and crystal have merged, unleashing your souls hunger for power upon the world"
+atk = 6
+mAtk = 6

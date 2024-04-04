@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://pnh8or3dfg62"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_kkhmi"]
+
+[resource]
+script = ExtResource("1_kkhmi")
+skillName = "Clensing Flame"
+skillDis = "Burns foe with Holy fire"
+dmgType = "Magical"
+healing = 0
+mpCost = 3
+power = 5
+hitChance = 100

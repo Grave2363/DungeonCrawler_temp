@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://djjdmplrfmp12"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_wesco"]
+
+[resource]
+script = ExtResource("1_wesco")
+skillName = "Shield Bash"
+skillDis = "Bashed foe with shield"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 1
+hitChance = 95

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://dy3nrbl4goeeo"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_6w557"]
+
+[resource]
+script = ExtResource("1_6w557")
+job_name = "Mummy"
+max_HP = 20
+max_Mp = 20
+atk = 1
+def = 1
+mDef = 1
+mAtk = 1
+spd = 2
+pureSoul = 0
+darkSoul = 0
+isPlayer = false

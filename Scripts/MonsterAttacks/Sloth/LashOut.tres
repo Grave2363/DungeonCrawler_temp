@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://mv34x2cr6n6b"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_vylc4"]
+
+[resource]
+script = ExtResource("1_vylc4")
+skillName = "Fearful Lashing"
+skillDis = "Sloth lSloth lashes out with encumbering magic"
+dmgType = "Magical"
+healing = 0
+mpCost = 2
+power = 5
+hitChance = 70

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://c2bkyish7mtuy"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_u8d5r"]
+
+[resource]
+script = ExtResource("1_u8d5r")
+WepName = "Soul Reaver"
+WepDis = "An infamus blade, said to originate from the lost nation of Sariel as a repurposed sickle"
+atk = 10
+mAtk = 10

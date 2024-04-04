@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://dcnapkka4y4qd"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_w60on"]
+
+[resource]
+script = ExtResource("1_w60on")
+skillName = "Punch"
+skillDis = "Basic Hit"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 3
+hitChance = 100
+targetable = false

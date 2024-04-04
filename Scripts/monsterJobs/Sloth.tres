@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://rsemsmypktc"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_04vtn"]
+
+[resource]
+script = ExtResource("1_04vtn")
+job_name = "Sloth"
+max_HP = 400
+max_Mp = 200
+atk = 1
+def = 20
+mDef = 20
+mAtk = 2
+spd = 1
+pureSoul = 0
+darkSoul = 20
+isPlayer = false

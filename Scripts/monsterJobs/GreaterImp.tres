@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://vcrv42cwr2n5"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_kb1dd"]
+
+[resource]
+script = ExtResource("1_kb1dd")
+job_name = "Greater Imp"
+max_HP = 30
+max_Mp = 40
+atk = 3
+def = 2
+mDef = 2
+mAtk = 3
+spd = 8
+pureSoul = 0
+darkSoul = 2
+isPlayer = false

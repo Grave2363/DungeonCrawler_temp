@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://k0ut7f8vb5up"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_hj5yn"]
+
+[resource]
+script = ExtResource("1_hj5yn")
+job_name = "Old Kings Remains"
+max_HP = 350
+max_Mp = 100
+atk = 4
+def = 5
+mDef = 5
+mAtk = 1
+spd = 1
+pureSoul = 0
+darkSoul = 1
+isPlayer = false

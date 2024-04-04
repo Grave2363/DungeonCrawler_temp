@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://dcet7svkuj3sv"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_hx06p"]
+
+[resource]
+script = ExtResource("1_hx06p")
+job_name = "Reaper"
+max_HP = 200
+max_Mp = 170
+atk = 45
+def = 10
+mDef = 10
+mAtk = 45
+spd = 25
+pureSoul = 0
+darkSoul = 10
+isPlayer = false

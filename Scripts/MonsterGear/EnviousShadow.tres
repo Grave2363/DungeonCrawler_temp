@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://bnrmmga7gbiku"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_o1o1h"]
+
+[resource]
+script = ExtResource("1_o1o1h")
+WepName = "Envious Shadow"
+WepDis = "The Corrupted shadow of the Old King, his Envy of his ancient rival made manifest"
+atk = 0
+mAtk = 2

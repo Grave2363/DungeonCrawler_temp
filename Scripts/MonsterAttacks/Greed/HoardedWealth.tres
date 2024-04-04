@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://c1s2p5oprasrc"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_l7kjv"]
+
+[resource]
+script = ExtResource("1_l7kjv")
+skillName = "Hoarded Wealth"
+skillDis = "Drawing from his piles of gold and items Greed heals tiself"
+dmgType = "Physical"
+healing = 40
+mpCost = 10
+power = 0
+hitChance = 90

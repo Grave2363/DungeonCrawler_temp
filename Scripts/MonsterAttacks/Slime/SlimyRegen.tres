@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://drltvw3arfndx"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_ad6oq"]
+
+[resource]
+script = ExtResource("1_ad6oq")
+skillName = "Slimey Regeneration"
+skillDis = "This heals the slime"
+dmgType = "Magic"
+healing = 5
+mpCost = 2
+power = 0
+hitChance = 100

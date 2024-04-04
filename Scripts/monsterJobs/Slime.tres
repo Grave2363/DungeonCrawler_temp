@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://6skvg06r5ppm"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_4i1e0"]
+
+[resource]
+script = ExtResource("1_4i1e0")
+job_name = "Slime"
+max_HP = 30
+max_Mp = 20
+atk = 1
+def = 25
+mDef = 10
+mAtk = 1
+spd = 3
+pureSoul = 0
+darkSoul = 1
+isPlayer = false

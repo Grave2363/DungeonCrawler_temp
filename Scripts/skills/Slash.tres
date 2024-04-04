@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cri7rojoowood"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_8u8b8"]
+
+[resource]
+script = ExtResource("1_8u8b8")
+skillName = "Slash"
+skillDis = "Basic sword attack"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 4
+hitChance = 100

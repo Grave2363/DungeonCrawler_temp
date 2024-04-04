@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://k778hs4y64no"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_lmr5a"]
+
+[resource]
+script = ExtResource("1_lmr5a")
+skillName = "Rolling Slam"
+skillDis = "Slug curls up and slams into foe "
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 3
+hitChance = 100

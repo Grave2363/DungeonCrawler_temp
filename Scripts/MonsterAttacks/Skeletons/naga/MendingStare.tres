@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://rsyhrc2aq5iv"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_sc3qb"]
+
+[resource]
+script = ExtResource("1_sc3qb")
+skillName = "Mending Gaze"
+skillDis = "The naga turns its bones to stone to repair damages"
+dmgType = "Physical"
+healing = 5
+mpCost = 0
+power = 0
+hitChance = 0

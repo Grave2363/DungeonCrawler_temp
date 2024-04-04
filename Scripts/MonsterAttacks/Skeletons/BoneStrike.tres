@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://bf54u62gh8lyb"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_3trxu"]
+
+[resource]
+script = ExtResource("1_3trxu")
+skillName = "Bone Strike"
+skillDis = "The undead strikes the foe with its bones"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 2
+hitChance = 0

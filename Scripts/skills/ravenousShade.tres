@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://b0iflxk5p7f4"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_pfnbh"]
+
+[resource]
+script = ExtResource("1_pfnbh")
+skillName = "Ravenous Shade"
+skillDis = "Let Lose your Fallen Soul to feast on the star"
+dmgType = "Magical"
+healing = 4
+mpCost = 4
+power = 16
+hitChance = 100

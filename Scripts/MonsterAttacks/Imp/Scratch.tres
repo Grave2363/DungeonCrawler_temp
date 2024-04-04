@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://dson7syignmwb"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_2k3ia"]
+
+[resource]
+script = ExtResource("1_2k3ia")
+skillName = "Scratch"
+skillDis = "Imp slashes foe with its crude claws"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 1
+hitChance = 100

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemBase" load_steps=2 format=3 uid="uid://c1et67rpedwls"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemBase.gd" id="1_ohj0m"]
+
+[resource]
+script = ExtResource("1_ohj0m")
+item_Name = "Dark Feast"
+ItemDis = "RiteRite learned in the abyss"
+uses = 4
+healing = 30

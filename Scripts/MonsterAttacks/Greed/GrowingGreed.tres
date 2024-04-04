@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://l3106fajjq5g"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_v7k4n"]
+
+[resource]
+script = ExtResource("1_v7k4n")
+skillName = "Growing Greed"
+skillDis = "Greed blasts the player with flames , kindling the greed in the player, dmg will increase depending on the player"
+dmgType = "Magical"
+healing = 0
+mpCost = 30
+power = 3
+hitChance = 0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://i6ocp5xtcj2f"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_s3fgh"]
+
+[resource]
+script = ExtResource("1_s3fgh")
+WepName = "Rancid Bandages"
+WepDis = "Burial Wrapings from a long lost culture"
+atk = 1
+mAtk = 0

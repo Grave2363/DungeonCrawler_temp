@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://dcqirn3eqyayq"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_wd0m8"]
+
+[resource]
+script = ExtResource("1_wd0m8")
+skillName = "Rotting Claws"
+skillDis = "Strikes the player with rotting claws"
+dmgType = "Physical"
+healing = 0
+mpCost = 2
+power = 3
+hitChance = 85

@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://de3mo8qfb1lge"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/job.gd" id="1_kc8bu"]
+[ext_resource type="PackedScene" path="res://Scenes/shared/CharacterSkills.tscn" id="2_0rksu"]
+[ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="2_itu0g"]
+[ext_resource type="PackedScene" path="res://Scenes/shared/Stats.tscn" id="2_pq4uq"]
+[ext_resource type="Script" path="res://Scripts/Items/PlayerItem.gd" id="5_xjo21"]
+
+[node name="Job" type="Node"]
+script = ExtResource("1_kc8bu")
+
+[node name="Weapons" parent="." instance=ExtResource("2_itu0g")]
+
+[node name="Stats" parent="." instance=ExtResource("2_pq4uq")]
+
+[node name="CharacterSkill" parent="." instance=ExtResource("2_0rksu")]
+
+[node name="Item" type="Node" parent="."]
+script = ExtResource("5_xjo21")

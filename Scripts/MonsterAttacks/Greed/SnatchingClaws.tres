@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://7u0ic6xg4tn0"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_lghqv"]
+
+[resource]
+script = ExtResource("1_lghqv")
+skillName = "Snatching Claws"
+skillDis = "Greed strikes the player hoping to claim some gold, but insted deals damage"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 2
+hitChance = 0

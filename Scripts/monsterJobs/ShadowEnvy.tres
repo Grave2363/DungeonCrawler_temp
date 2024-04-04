@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://bgbnnu4tgpfwq"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_7j4ad"]
+
+[resource]
+script = ExtResource("1_7j4ad")
+job_name = "Shadow of Envy"
+max_HP = 10
+max_Mp = 200
+atk = 3
+def = 1
+mDef = 1
+mAtk = 3
+spd = 10
+pureSoul = 0
+darkSoul = 0
+isPlayer = false

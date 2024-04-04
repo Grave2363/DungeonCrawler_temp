@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemBase" load_steps=2 format=3 uid="uid://cy33n0dt67w2a"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemBase.gd" id="1_pimfw"]
+
+[resource]
+script = ExtResource("1_pimfw")
+item_Name = "Mending Light"
+ItemDis = "AwakeniRite gifted to the most devout Crusaders"
+uses = 5
+healing = 35

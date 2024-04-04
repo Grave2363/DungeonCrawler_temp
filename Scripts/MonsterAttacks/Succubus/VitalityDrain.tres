@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://bo3okjwlvxw0y"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_cb7q5"]
+
+[resource]
+script = ExtResource("1_cb7q5")
+skillName = "Vitality Drain"
+skillDis = "Swiftly striking her target the succubus drains her targets vitality "
+dmgType = "Physical"
+healing = 20
+mpCost = 6
+power = 1
+hitChance = 100
+targetable = false

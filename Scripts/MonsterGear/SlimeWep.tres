@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://c7pyk7r2yokl"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_5bq5w"]
+
+[resource]
+script = ExtResource("1_5bq5w")
+WepName = "Sticky Slime"
+WepDis = "Slimey Crap"
+atk = 2
+mAtk = 2

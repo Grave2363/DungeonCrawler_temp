@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://brja00br2j5ax"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_7andy"]
+
+[resource]
+script = ExtResource("1_7andy")
+WepName = "Radiant Blade"
+WepDis = "The crystal within your arm reacted to your faith, forging a once broken blade into one of both light and steel"
+atk = 7
+mAtk = 7

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://o3o76u1w62ha"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_r8h2m"]
+
+[resource]
+script = ExtResource("1_r8h2m")
+skillName = "Smite"
+skillDis = "Strikes foe with Holy Light"
+dmgType = "Magical"
+healing = 0
+mpCost = 2
+power = 5
+hitChance = 100

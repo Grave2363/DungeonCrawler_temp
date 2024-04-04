@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://3uvss8kx3lyp"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_fwlh8"]
+
+[resource]
+script = ExtResource("1_fwlh8")
+WepName = "Golden Sarcophagus"
+WepDis = "The sealed housing of an Old King's remains"
+atk = 4
+mAtk = 1

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://bxqxl1xdn4p81"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_c26fg"]
+
+[resource]
+script = ExtResource("1_c26fg")
+skillName = "Claw of Desire"
+skillDis = "The Shadow used the player's atk to inflict dmg"
+dmgType = "Physical"
+healing = 0
+mpCost = 0
+power = 0
+hitChance = 0
+targetable = false

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://c45qbgcokyek0"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_0qcvn"]
+
+[resource]
+script = ExtResource("1_0qcvn")
+skillName = "Soul syphon"
+skillDis = "The Shadow drains the Health of the target"
+dmgType = "Magical"
+healing = 30
+mpCost = 30
+power = 2
+hitChance = 0
+targetable = false

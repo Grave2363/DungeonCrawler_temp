@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemBase" load_steps=2 format=3 uid="uid://k1e4qhl6q6mh"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemBase.gd" id="1_5awdu"]
+
+[resource]
+script = ExtResource("1_5awdu")
+item_Name = "Standard Issue Potion"
+ItemDis = "Basic potion given to all crusaders"
+uses = 3
+healing = 20

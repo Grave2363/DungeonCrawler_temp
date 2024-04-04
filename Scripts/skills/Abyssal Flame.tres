@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://dt3vvw6e7jdko"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_1ynmg"]
+
+[resource]
+script = ExtResource("1_1ynmg")
+skillName = "Abyssal Flame"
+skillDis = "Harness the growing dark within your crystal to set foes ablaze"
+dmgType = "Magical"
+healing = 0
+mpCost = 3
+power = 10
+hitChance = 100

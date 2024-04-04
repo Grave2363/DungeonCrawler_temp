@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://cbjoa7ka7csxo"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_dm1ut"]
+
+[resource]
+script = ExtResource("1_dm1ut")
+WepName = "Sloth Tendrils"
+WepDis = "Tendrils of Sloth, once great blades of Crusaders now filled with life as an extention of the Demon"
+atk = 3
+mAtk = 3
