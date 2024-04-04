@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnrtg0pcetwm4"]
+[gd_scene load_steps=15 format=3 uid="uid://bnrtg0pcetwm4"]
 
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="1_618if"]
+[ext_resource type="Script" path="res://Scripts/Combat/Mob_Base.gd" id="1_u57gu"]
 [ext_resource type="Resource" uid="uid://6skvg06r5ppm" path="res://Scripts/monsterJobs/Slime.tres" id="2_nk205"]
 [ext_resource type="Resource" uid="uid://dcnapkka4y4qd" path="res://Scripts/MonsterAttacks/BasicAttacks/Punch.tres" id="3_lk1p2"]
 [ext_resource type="Script" path="res://Scripts/Combat/Actions.gd" id="4_fundl"]
@@ -21,6 +22,7 @@ bg_color = Color(0, 0.576471, 0.321569, 1)
 bg_color = Color(0, 0.654902, 0.866667, 1)
 
 [node name="MobBase" type="Node2D"]
+script = ExtResource("1_u57gu")
 
 [node name="Job" parent="." instance=ExtResource("1_618if")]
 startingStats = ExtResource("2_nk205")
@@ -43,18 +45,31 @@ position = Vector2(10, 10)
 scale = Vector2(0.84375, 0.84375)
 texture = ExtResource("5_sp2yx")
 
+[node name="Panel" type="Panel" parent="Sprite2D"]
+offset_left = -60.4444
+offset_top = -123.259
+offset_right = 56.5556
+offset_bottom = -93.2593
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D/Panel"]
+layout_mode = 0
+offset_left = 4.03704
+offset_top = 5.74074
+offset_right = 104.037
+offset_bottom = 32.7407
+text = "Temp Mob"
+
 [node name="MenuBar" type="MenuBar" parent="."]
-offset_left = -39.0
-offset_top = -89.0
-offset_right = 57.0
-offset_bottom = -49.0
+offset_left = -96.0
+offset_top = -61.0
+offset_bottom = -21.0
 
 [node name="HP" type="ProgressBar" parent="MenuBar"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 21.0
-offset_right = 97.0
-offset_bottom = 44.0
+offset_left = 56.0
+offset_top = -6.0
+offset_right = 156.0
+offset_bottom = 17.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ijmih")
 theme_override_styles/fill = SubResource("StyleBoxFlat_66soj")
 max_value = 30.0
@@ -72,3 +87,5 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_s5y34")
 max_value = 20.0
 value = 20.0
 show_percentage = false
+
+[connection signal="HealthEmpty" from="Job" to="." method="_on_job_health_empty"]

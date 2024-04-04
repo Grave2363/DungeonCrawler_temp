@@ -38,4 +38,6 @@ offset_right = 283.0
 offset_bottom = 115.0
 text = "Close"
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/InventoryPopUp/Button" to="." method="_on_button_pressed"]

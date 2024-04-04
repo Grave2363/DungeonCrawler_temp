@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://0vqy8ix8ppv7"]
+[gd_scene load_steps=9 format=3 uid="uid://0vqy8ix8ppv7"]
 
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_c8g1p"]
 [ext_resource type="Script" path="res://Scripts/Levels/level01.gd" id="1_oxxcn"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dpmnigslhbuf0" path="res://assets/Temp_tileset.png" id="3_72jqo"]
 [ext_resource type="PackedScene" uid="uid://cq37j53xehx71" path="res://Scenes/player.tscn" id="4_umppa"]
 [ext_resource type="PackedScene" uid="uid://buopoio0ngwls" path="res://Scenes/shared/battle_screen.tscn" id="6_liitv"]
+[ext_resource type="Script" path="res://Scripts/Combat/Encounter_Screen.gd" id="7_f4y1r"]
+[ext_resource type="PackedScene" uid="uid://bnrtg0pcetwm4" path="res://Scenes/Battle/Mobs/Mob_Base.tscn" id="8_2vnpy"]
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_oxxcn")
@@ -148,4 +150,17 @@ bottom_face = 20
 
 [node name="BattleScreen" parent="Player" instance=ExtResource("6_liitv")]
 
+[node name="Encounter_Screen" type="CanvasLayer" parent="Player"]
+script = ExtResource("7_f4y1r")
+
+[node name="Panel" type="Panel" parent="Player/Encounter_Screen"]
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1146.0
+offset_bottom = 486.0
+
+[node name="MobBase" parent="Player/Encounter_Screen/Panel" instance=ExtResource("8_2vnpy")]
+position = Vector2(308, 246)
+
 [connection signal="running" from="Player/BattleScreen" to="Player" method="_on_battle_screen_running"]
+[connection signal="dead" from="Player/Encounter_Screen/Panel/MobBase" to="Player/Encounter_Screen" method="_on_mob_base_dead"]

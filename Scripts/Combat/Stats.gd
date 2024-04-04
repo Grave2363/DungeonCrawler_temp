@@ -19,7 +19,7 @@ var mAtk : int
 # used for evasion
 var spd : int 
 var isPlayer : bool
-func initalize(stats : StartingStats, wep : WepBase):
+func initialize(stats : StartingStats, wep : WepBase):
 	isPlayer = stats.isPlayer
 	pure_Soul = stats.pureSoul
 	dark_soul = stats.darkSoul

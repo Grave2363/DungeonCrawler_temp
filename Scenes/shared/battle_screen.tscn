@@ -18,7 +18,7 @@ offset_left = 4.0
 offset_top = 2.0
 offset_right = 392.0
 offset_bottom = 156.0
-text = "Battle Demo"
+text = "Demo Text"
 
 [node name="Attack" type="Button" parent="Panel"]
 visible = false
