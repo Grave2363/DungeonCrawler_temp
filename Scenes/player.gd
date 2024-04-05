@@ -21,22 +21,22 @@ func _physics_process(delta):
 		return
 	dir = global_transform.basis.z
 	if Input.is_action_pressed("ui_up") and not front_ray.is_colliding():
-		tween = create_tween()
+		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.connect("finished", on_tween_finished)
 		tween.tween_property(self,"transform", transform.translated(dir * -2), travel_time)
 		tween_running = true
 	if Input.is_action_pressed("ui_down") and not back_ray.is_colliding():
-		tween = create_tween()
+		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.connect("finished", on_tween_finished)
 		tween.tween_property(self,"transform", transform.translated(dir * 2), travel_time)
 		tween_running = true
 	if Input.is_action_pressed("ui_left") :
-		tween = create_tween()
+		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.connect("finished", on_tween_finished)
 		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP, PI / 2 ), travel_time)
 		tween_running = true
 	if Input.is_action_pressed("ui_right") :
-		tween = create_tween()
+		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.connect("finished", on_tween_finished)
 		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP, -PI / 2), travel_time)
 		tween_running = true

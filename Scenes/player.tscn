@@ -39,5 +39,6 @@ offset_bottom = 115.0
 text = "Close"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 0.25
 
 [connection signal="pressed" from="CanvasLayer/InventoryPopUp/Button" to="." method="_on_button_pressed"]

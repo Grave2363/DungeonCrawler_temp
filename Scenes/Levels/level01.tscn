@@ -18,6 +18,7 @@ script = ExtResource("1_oxxcn")
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock2" type="Node3D" parent="Blocks"]
@@ -26,6 +27,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 west_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock3" type="Node3D" parent="Blocks"]
@@ -34,6 +36,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock4" type="Node3D" parent="Blocks"]
@@ -41,6 +44,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock5" type="Node3D" parent="Blocks"]
@@ -49,6 +53,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 west_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock6" type="Node3D" parent="Blocks"]
@@ -57,6 +62,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock7" type="Node3D" parent="Blocks"]
@@ -64,6 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock8" type="Node3D" parent="Blocks"]
@@ -73,6 +80,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 north_face = 1
 west_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock9" type="Node3D" parent="Blocks"]
@@ -82,6 +90,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 north_face = 2
 east_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock10" type="Node3D" parent="Blocks"]
@@ -89,8 +98,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
-south_face = 0
+south_face = 6
+top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock10"]
+light_energy = 0.5
 
 [node name="LevelBlock11" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
@@ -99,6 +112,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 south_face = 0
 west_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock12" type="Node3D" parent="Blocks"]
@@ -108,6 +122,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 0
 south_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock13" type="Node3D" parent="Blocks"]
@@ -117,6 +132,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 1
 west_face = 2
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock14" type="Node3D" parent="Blocks"]
@@ -126,6 +142,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 0
 west_face = 0
+top_face = 5
 bottom_face = 20
 
 [node name="LevelBlock15" type="Node3D" parent="Blocks"]
@@ -133,9 +150,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
-east_face = 0
-west_face = 0
+east_face = 6
+west_face = 6
+top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock15"]
+light_energy = 0.5
 
 [node name="LevelBlock16" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
@@ -144,6 +165,7 @@ material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("3_72jqo")
 east_face = 2
 west_face = 1
+top_face = 5
 bottom_face = 20
 
 [node name="Player" parent="." instance=ExtResource("4_umppa")]
@@ -151,6 +173,7 @@ bottom_face = 20
 [node name="BattleScreen" parent="Player" instance=ExtResource("6_liitv")]
 
 [node name="Encounter_Screen" type="CanvasLayer" parent="Player"]
+visible = false
 script = ExtResource("7_f4y1r")
 
 [node name="Panel" type="Panel" parent="Player/Encounter_Screen"]
