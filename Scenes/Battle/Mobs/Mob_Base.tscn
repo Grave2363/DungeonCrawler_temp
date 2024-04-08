@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://c7pyk7r2yokl" path="res://Scripts/MonsterGear/SlimeWep.tres" id="5_qle1m"]
 [ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="5_sp2yx"]
 [ext_resource type="Resource" uid="uid://k1e4qhl6q6mh" path="res://Scripts/Items/standardPotion.tres" id="6_ymvem"]
-[ext_resource type="PackedScene" path="res://Scenes/shared/char_item.tscn" id="7_jor5y"]
+[ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="7_jor5y"]
 [ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="8_6yegh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijmih"]

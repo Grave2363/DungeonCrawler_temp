@@ -24,9 +24,9 @@ func _ready():
 	if StartingSkills != null and StartingSkills.size() > 0:
 		for skill in StartingSkills :
 			var newSkill = characterSkillScene.instantiate()
-			newSkill.initalize(skill)
+			newSkill.initialize(skill)
 			skills.add_child(newSkill)
 	var newItem = itemScene.instantiate()
-	newItem.initalize(equipedItem)
+	newItem.initialize(equipedItem)
 	item.add_child(newItem)
 

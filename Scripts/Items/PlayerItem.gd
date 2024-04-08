@@ -7,7 +7,7 @@ var ItemDis : String = "What is this?"
 var healing : int
 var uses : int
 
-func initalize (thing :ItemBase):
+func initialize (thing :ItemBase):
 	ItemName = thing.item_Name
 	ItemDis = thing.ItemDis
 	healing = thing.healing

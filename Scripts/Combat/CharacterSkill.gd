@@ -10,7 +10,7 @@ var hitChance : int
 var dmgtype : String
 var targetable : bool
 
-func initalize (skill :Skill):
+func initialize (skill :Skill):
 	name = skill.skillName
 	skillDis = skill.skillDis
 	healing = skill.healing

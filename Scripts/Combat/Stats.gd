@@ -6,8 +6,6 @@ signal HelathChange(newHp)
 signal HealthEmpty()
 
 #used only for player
-var pure_Soul : int
-var dark_soul : int 
 var max_HP : int
 var max_Mp : int
 var hp : int
@@ -19,18 +17,17 @@ var mAtk : int
 # used for evasion
 var spd : int 
 var isPlayer : bool
+
 func initialize(stats : StartingStats, wep : WepBase):
 	isPlayer = stats.isPlayer
-	pure_Soul = stats.pureSoul
-	dark_soul = stats.darkSoul
-	max_HP  = stats.max_HP + pure_Soul + dark_soul
-	max_Mp = stats.max_Mp + dark_soul
+	max_HP  = stats.max_HP
+	max_Mp = stats.max_Mp
 	hp = stats.max_HP
 	mp = stats.max_Mp
-	atk = stats.atk + wep.atk + pure_Soul
-	def = stats.def + dark_soul + pure_Soul
-	mDef = stats.mDef + dark_soul
-	mAtk = stats.mAtk + wep.mAtk + dark_soul
+	atk = stats.atk + wep.atk 
+	def = stats.def 
+	mDef = stats.mDef 
+	mAtk = stats.mAtk + wep.mAtk 
 	spd = stats.spd
 
 func get_hp():

@@ -13,6 +13,12 @@ target_position = Vector3(0, 0, 2)
 [node name="RayFront" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -2)
 
+[node name="RayLeft" type="RayCast3D" parent="."]
+target_position = Vector3(-2, 0, -2)
+
+[node name="RayRight" type="RayCast3D" parent="."]
+target_position = Vector3(2, 0, -2)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="InventoryPopUp" type="Panel" parent="CanvasLayer"]
