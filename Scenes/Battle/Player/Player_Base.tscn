@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/shared/CharacterSkills.tscn" id="4_oom2w"]
 [ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="5_3fipe"]
 [ext_resource type="Resource" uid="uid://bb0clwfeudf15" path="res://Scripts/weps/Sword.tres" id="5_i22ks"]
-[ext_resource type="PackedScene" path="res://Scenes/shared/char_item.tscn" id="7_ooqlj"]
+[ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="7_ooqlj"]
 [ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="9_nwu3e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijmih"]
@@ -21,7 +21,7 @@ bg_color = Color(0, 0.576471, 0.321569, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5y34"]
 bg_color = Color(0, 0.654902, 0.866667, 1)
 
-[node name="MobBase" type="Node2D"]
+[node name="Player_base" type="Node2D"]
 script = ExtResource("1_uyast")
 
 [node name="Job" parent="." instance=ExtResource("2_2eohw")]

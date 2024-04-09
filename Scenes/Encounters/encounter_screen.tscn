@@ -4,14 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bnrtg0pcetwm4" path="res://Scenes/Battle/Mobs/Mob_Base.tscn" id="2_hnfw1"]
 
 [node name="Encounter_Screen" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_ehut2")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 4.0
 offset_top = 1.0
 offset_right = 1146.0
-offset_bottom = 486.0
+offset_bottom = 336.0
 
 [node name="MobBase" parent="Panel" instance=ExtResource("2_hnfw1")]
 position = Vector2(308, 246)

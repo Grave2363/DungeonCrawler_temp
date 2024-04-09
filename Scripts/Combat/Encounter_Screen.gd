@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-
+signal endCombat
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,4 +12,8 @@ func _process(delta):
 
 
 func _on_mob_base_dead():
-	pass # Replace with function body.
+	emit_signal("endCombat")
+
+
+func _on_battle_screen_attack():
+	$Panel/MobBase.takingDmg(10)

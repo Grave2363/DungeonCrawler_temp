@@ -10,6 +10,11 @@ func _ready():
 func _process(delta):
 	pass
 
+func new_encounter():
+	$Player/Encounter_Screen.visible = !$Player/Encounter_Screen.visible
+	
 
 func _on_player_encounter_start():
-	pass # Replace with function body.
+	new_encounter()
+	$Player/BattleScreen.display_combat()
+

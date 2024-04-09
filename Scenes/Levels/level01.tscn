@@ -172,6 +172,9 @@ bottom_face = 20
 [node name="BattleScreen" parent="Player" instance=ExtResource("6_liitv")]
 
 [node name="Encounter_Screen" parent="Player" instance=ExtResource("7_btg0d")]
+visible = false
 
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
+[connection signal="attack" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_attack"]
 [connection signal="running" from="Player/BattleScreen" to="Player" method="_on_battle_screen_running"]
+[connection signal="endCombat" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_end_combat"]

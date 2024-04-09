@@ -55,7 +55,16 @@ offset_right = 1123.0
 offset_bottom = 80.0
 text = "Bag"
 
-[node name="MobBase" parent="Panel" instance=ExtResource("1_vgjic")]
-position = Vector2(292, 91)
+[node name="Attacks" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 12.0
+offset_top = -136.0
+offset_right = 1125.0
+offset_bottom = -8.0
 
+[node name="Player_base" parent="Panel" instance=ExtResource("1_vgjic")]
+position = Vector2(335, 92)
+
+[connection signal="pressed" from="Panel/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Panel/Run" to="." method="_on_run_pressed"]

@@ -12,23 +12,34 @@ const travel_time = 0.3
 var dir = Vector3(0,0,0)
 var dirAlt = Vector3(0,0,0)
 var inFight = false
+var encountersOn = true
+var encounterCDTimer := Timer.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	add_child(encounterCDTimer)
+	encounterCDTimer.wait_time = 10.0
+	encounterCDTimer.connect("timeout",_on_timer_timeout) 
 
+func _on_timer_timeout():
+	encountersOn = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 
-func start_fight():
-	inFight = true
+func end_fight():
+	inFight = false
+	$Encounter_Screen.visible = !$Encounter_Screen.visible
+	encounterCDTimer.start()
 
 
 func encounter_trigger():
 	var encounter_rand = rng.randf_range(0, 40)
-	if encounter_rand >= 30:
+	if encounter_rand >= 30 and encountersOn == true:
 		emit_signal("encounter_start")
+		inFight = true
+		encountersOn = false
 
 
 func _physics_process(delta):
@@ -82,4 +93,8 @@ func _on_button_pressed():
 
 
 func _on_battle_screen_running():
-	inFight = false
+	end_fight()
+
+
+func _on_encounter_screen_end_combat():
+	end_fight()
