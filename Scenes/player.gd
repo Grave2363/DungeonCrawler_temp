@@ -5,6 +5,7 @@ extends Node3D
 @onready var ray_left = $RayLeft
 @onready var ray_right = $RayRight
 signal encounter_start
+signal need_new_encounter
 var tween
 var rng = RandomNumberGenerator.new()
 var tween_running = false
@@ -31,7 +32,9 @@ func _process(delta):
 func end_fight():
 	inFight = false
 	$Encounter_Screen.visible = !$Encounter_Screen.visible
+	$BattleScreen.command_disable()
 	encounterCDTimer.start()
+	emit_signal("need_new_encounter")
 
 
 func encounter_trigger():

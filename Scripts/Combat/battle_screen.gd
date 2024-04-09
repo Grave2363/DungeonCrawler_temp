@@ -22,15 +22,15 @@ func _on_run_pressed():
 	emit_signal("running")
 	command_disable()
 func display_combat():
-	$Panel/Attack.visible = !$Panel/Attack.visible
-	$Panel/Run.visible = !$Panel/Run.visible
-	$Panel/Guard.visible = !$Panel/Guard.visible
+	$Panel/Attack.visible = true
+	$Panel/Run.visible = true
+	$Panel/Guard.visible = true
 
 func command_disable():
-	$Panel/Attack.visible = !$Panel/Attack.visible
-	$Panel/Run.visible = !$Panel/Run.visible
-	$Panel/Guard.visible = !$Panel/Guard.visible
-	$Panel/Attacks.visible = !$Panel/Attacks.visible
+	$Panel/Attack.visible = false
+	$Panel/Run.visible = false
+	$Panel/Guard.visible = false
+	$Panel/Attacks.visible = false
 
 
 func _on_attack_pressed():
