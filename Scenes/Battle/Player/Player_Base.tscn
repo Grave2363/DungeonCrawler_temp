@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b4cqk3qwt5qyh"]
+[gd_scene load_steps=16 format=3 uid="uid://b4cqk3qwt5qyh"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/BaseFighter.gd" id="1_uyast"]
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="2_2eohw"]
@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://gfulb6nckr8w" path="res://Scripts/Combat/Crusader.tres" id="2_errl2"]
 [ext_resource type="Resource" uid="uid://dcnapkka4y4qd" path="res://Scripts/MonsterAttacks/BasicAttacks/Punch.tres" id="3_otcq3"]
 [ext_resource type="Script" path="res://Scripts/Combat/Actions.gd" id="4_hq3eh"]
-[ext_resource type="PackedScene" path="res://Scenes/shared/CharacterSkills.tscn" id="4_oom2w"]
+[ext_resource type="PackedScene" uid="uid://bvgnhdm5ubltv" path="res://Scenes/shared/CharacterSkills.tscn" id="4_oom2w"]
+[ext_resource type="Resource" uid="uid://3ltem2qyv7qg" path="res://Scripts/PlayerGrowths/BaseGrowths.tres" id="4_uck02"]
 [ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="5_3fipe"]
 [ext_resource type="Resource" uid="uid://bb0clwfeudf15" path="res://Scripts/weps/Sword.tres" id="5_i22ks"]
 [ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="7_ooqlj"]
@@ -23,6 +24,9 @@ bg_color = Color(0, 0.654902, 0.866667, 1)
 
 [node name="Player_base" type="Node2D"]
 script = ExtResource("1_uyast")
+special_item = ExtResource("2_7aq14")
+stats = ExtResource("2_errl2")
+growths = ExtResource("4_uck02")
 
 [node name="Job" parent="." instance=ExtResource("2_2eohw")]
 startingStats = ExtResource("2_errl2")

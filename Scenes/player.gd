@@ -34,6 +34,7 @@ func end_fight():
 	$Encounter_Screen.visible = false
 	$BattleScreen.command_disable()
 	encounterCDTimer.start()
+	$BattleScreen.battleWon($Encounter_Screen.get_xp())
 	emit_signal("need_new_encounter")
 
 

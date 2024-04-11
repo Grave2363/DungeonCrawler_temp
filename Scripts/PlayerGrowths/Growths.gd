@@ -1,11 +1,9 @@
 extends Resource
 
-class_name StartingStats
+class_name Growths
 
 # name for enitiy 
 @export var job_name : String = "Job"
-@export var level : int
-@export var provided_xp : int
 @export var max_HP : int 
 @export var max_Mp : int 
 @export var atk : int 
@@ -15,6 +13,4 @@ class_name StartingStats
 # used for evasion
 @export var spd : int 
 #player only stats
-@export var pureSoul : int
-@export var darkSoul : int
 @export var isPlayer : bool

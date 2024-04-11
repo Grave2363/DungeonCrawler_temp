@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://6skvg06r5ppm" path="res://Scripts/monsterJobs/Slime.tres" id="2_nk205"]
 [ext_resource type="Resource" uid="uid://dcnapkka4y4qd" path="res://Scripts/MonsterAttacks/BasicAttacks/Punch.tres" id="3_lk1p2"]
 [ext_resource type="Script" path="res://Scripts/Combat/Actions.gd" id="4_fundl"]
-[ext_resource type="PackedScene" path="res://Scenes/shared/CharacterSkills.tscn" id="4_skrhp"]
+[ext_resource type="PackedScene" uid="uid://bvgnhdm5ubltv" path="res://Scenes/shared/CharacterSkills.tscn" id="4_skrhp"]
 [ext_resource type="Resource" uid="uid://c7pyk7r2yokl" path="res://Scripts/MonsterGear/SlimeWep.tres" id="5_qle1m"]
 [ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="5_sp2yx"]
 [ext_resource type="Resource" uid="uid://k1e4qhl6q6mh" path="res://Scripts/Items/standardPotion.tres" id="6_ymvem"]

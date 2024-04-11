@@ -17,6 +17,8 @@ func on_attack01_pressed():
 func _process(delta):
 	pass
 
+func battleWon(xp):
+	$Panel/Player_base.xp_gained(xp)
 
 func _on_run_pressed():
 	emit_signal("running")
@@ -35,3 +37,4 @@ func command_disable():
 
 func _on_attack_pressed():
 	$Panel/Attacks.visible = !$Panel/Attacks.visible
+

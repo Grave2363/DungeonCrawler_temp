@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_asoly")
 job_name = "Crusader"
+level = 1
 max_HP = 50
 max_Mp = 10
 atk = 3

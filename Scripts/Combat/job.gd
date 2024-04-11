@@ -30,3 +30,5 @@ func _ready():
 	newItem.initialize(equipedItem)
 	item.add_child(newItem)
 
+func get_xp():
+	return startingStats.provided_xp

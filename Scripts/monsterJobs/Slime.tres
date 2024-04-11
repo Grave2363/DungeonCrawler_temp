@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_4i1e0")
 job_name = "Slime"
+level = 0
+provided_xp = 10
 max_HP = 30
 max_Mp = 20
 atk = 1

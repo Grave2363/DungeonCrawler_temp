@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Growths" load_steps=2 format=3 uid="uid://3ltem2qyv7qg"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerGrowths/Growths.gd" id="1_on884"]
+
+[resource]
+script = ExtResource("1_on884")
+job_name = "Job"
+max_HP = 45
+max_Mp = 35
+atk = 45
+def = 35
+mDef = 30
+mAtk = 20
+spd = 25
+isPlayer = false

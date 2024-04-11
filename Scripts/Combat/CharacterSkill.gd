@@ -2,6 +2,7 @@ extends Node
 
 class_name CharacterSkill
 
+var level_unlock : int
 var skillDis : String
 var mpCost : int
 var healing : int

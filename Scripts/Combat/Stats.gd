@@ -30,6 +30,15 @@ func initialize(stats : StartingStats, wep : WepBase):
 	mAtk = stats.mAtk + wep.mAtk 
 	spd = stats.spd
 
+func level_up_stats(Lhp : int, Lmp : int, Latk : int, Ldef : int, Lmdef: int, Lmatk : int, Lspd : int):
+	max_HP = max_HP + Lhp
+	max_Mp = max_Mp + Lmp
+	atk = atk + Latk
+	def = def + Ldef
+	mDef = mDef + Lmdef
+	mAtk = mAtk + Lmatk
+	spd = spd + Lspd
+
 func get_hp():
 	return hp
 
