@@ -1,6 +1,8 @@
 extends CanvasLayer
 signal running
 signal attack
+signal nextTarget
+signal prevTarget
 var attack01 = Button.new()
 var skillArray = [attack01]
 # Called when the node enters the scene tree for the first time.
@@ -27,14 +29,26 @@ func display_combat():
 	$Panel/Attack.visible = true
 	$Panel/Run.visible = true
 	$Panel/Guard.visible = true
+	$Panel/Target_left.visible = true
+	$Panel/Target_right.visible = true
 
 func command_disable():
 	$Panel/Attack.visible = false
 	$Panel/Run.visible = false
 	$Panel/Guard.visible = false
 	$Panel/Attacks.visible = false
+	$Panel/Target_left.visible = false
+	$Panel/Target_right.visible = false
 
 
 func _on_attack_pressed():
 	$Panel/Attacks.visible = !$Panel/Attacks.visible
 
+
+
+func _on_target_right_pressed():
+	emit_signal("nextTarget")
+
+
+func _on_target_left_pressed():
+	emit_signal("prevTarget")

@@ -15,6 +15,9 @@ func takingDmg(dmg):
 	if $MenuBar/HP.value <= 0:
 		emit_signal("dead")
 
+func get_hp():
+	return $MenuBar/HP.value
+
 func get_xp():
 	return $Job.get_xp()
 

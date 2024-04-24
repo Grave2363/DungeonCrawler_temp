@@ -63,8 +63,28 @@ offset_top = -136.0
 offset_right = 1125.0
 offset_bottom = -8.0
 
+[node name="Target_right" type="Button" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 97.0
+offset_right = 1136.0
+offset_bottom = 128.0
+text = "Target ->"
+
+[node name="Target_left" type="Button" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 966.0
+offset_top = 100.0
+offset_right = 1047.0
+offset_bottom = 131.0
+text = "<- Target "
+
 [node name="Player_base" parent="Panel" instance=ExtResource("1_vgjic")]
 position = Vector2(335, 92)
 
 [connection signal="pressed" from="Panel/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Panel/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="Panel/Target_right" to="." method="_on_target_right_pressed"]
+[connection signal="pressed" from="Panel/Target_left" to="." method="_on_target_left_pressed"]
