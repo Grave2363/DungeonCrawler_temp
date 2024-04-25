@@ -37,6 +37,12 @@ func end_fight():
 	$BattleScreen.battleWon($Encounter_Screen.get_xp())
 	emit_signal("need_new_encounter")
 
+func flee_fight():
+	inFight = false
+	$Encounter_Screen.visible = false
+	$BattleScreen.command_disable()
+	encounterCDTimer.start()
+	emit_signal("need_new_encounter")
 
 func encounter_trigger():
 	var encounter_rand = rng.randf_range(0, 40)
@@ -96,9 +102,10 @@ func _on_button_pressed():
 	$CanvasLayer/InventoryPopUp.visible = !$CanvasLayer/InventoryPopUp.visible
 
 
-func _on_battle_screen_running():
-	end_fight()
-
 
 func _on_encounter_screen_end_combat():
 	end_fight()
+
+
+func _on_encounter_screen_player_ran():
+	flee_fight()

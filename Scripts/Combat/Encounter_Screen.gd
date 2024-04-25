@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal endCombat
+signal playerRan
 const mob_01 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_Base.tscn")
 const mob_02 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_temp02.tscn")
 var fighter01 
@@ -78,7 +79,7 @@ func get_xp():
 func _on_mob_base_dead():
 	emit_signal("endCombat")
 	$Panel.get_child(0).queue_free()
-	mobs.remove_at(fighter01)
+	mobs.remove_at(0)
 
 func on_multi_mob_death():
 	mobs.remove_at(target)
@@ -105,7 +106,13 @@ func _on_player_need_new_encounter():
 
 
 func _on_battle_screen_running():
-	$Panel.get_child(0).queue_free()
+	var x = 0
+	var temp = mobs.size()
+	while x < temp:
+		$Panel.get_child(x).queue_free()
+		mobs.remove_at(x)
+		x = x + 1
+	emit_signal("playerRan")
 
 
 func _on_battle_screen_next_target():

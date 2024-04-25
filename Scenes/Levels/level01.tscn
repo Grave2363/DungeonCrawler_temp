@@ -179,6 +179,6 @@ visible = false
 [connection signal="attack" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_attack"]
 [connection signal="nextTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_next_target"]
 [connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_prev_target"]
-[connection signal="running" from="Player/BattleScreen" to="Player" method="_on_battle_screen_running"]
 [connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_running"]
 [connection signal="endCombat" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_end_combat"]
+[connection signal="playerRan" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_player_ran"]

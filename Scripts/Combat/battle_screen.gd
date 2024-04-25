@@ -25,6 +25,7 @@ func battleWon(xp):
 func _on_run_pressed():
 	emit_signal("running")
 	command_disable()
+
 func display_combat():
 	$Panel/Attack.visible = true
 	$Panel/Run.visible = true
