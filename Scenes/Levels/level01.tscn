@@ -167,6 +167,216 @@ west_face = 1
 top_face = 5
 bottom_face = 20
 
+[node name="LevelBlock17" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock19" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 2
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock21" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock22" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+south_face = 6
+top_face = 5
+bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock22"]
+light_energy = 0.5
+
+[node name="LevelBlock24" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -14)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+west_face = 2
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock29" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -16)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock30" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -18)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock32" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -22)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock33" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -24)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 2
+west_face = 1
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock34" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -26)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 6
+top_face = 5
+bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock34"]
+light_energy = 0.5
+
+[node name="LevelBlock36" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -26)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 2
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock35" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -26)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 1
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock31" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -20)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 6
+west_face = 6
+top_face = 5
+bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock31"]
+light_energy = 0.5
+
+[node name="LevelBlock23" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 1
+south_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock18" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 1
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock20" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 6
+south_face = 6
+top_face = 5
+bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock20"]
+light_energy = 0.5
+
+[node name="LevelBlock25" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+south_face = 2
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock26" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -12)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+north_face = 0
+east_face = 0
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock27" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+west_face = 1
+top_face = 5
+bottom_face = 20
+
+[node name="LevelBlock28" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+script = ExtResource("1_c8g1p")
+material = ExtResource("2_uhukn")
+texture_sheet = ExtResource("3_72jqo")
+east_face = 0
+south_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 20
+
 [node name="Player" parent="." instance=ExtResource("4_umppa")]
 
 [node name="BattleScreen" parent="Player" instance=ExtResource("6_liitv")]
