@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4cqk3qwt5qyh"]
+[gd_scene load_steps=20 format=3 uid="uid://b4cqk3qwt5qyh"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/BaseFighter.gd" id="1_uyast"]
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="2_2eohw"]
@@ -12,6 +12,10 @@
 [ext_resource type="Resource" uid="uid://bb0clwfeudf15" path="res://Scripts/weps/Sword.tres" id="5_i22ks"]
 [ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="7_ooqlj"]
 [ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="9_nwu3e"]
+[ext_resource type="Resource" uid="uid://cok4mpid2vrt0" path="res://Scripts/PlayerArmor/BasicChest.tres" id="9_rx5j0"]
+[ext_resource type="Resource" uid="uid://cgy03lt8g0jlu" path="res://Scripts/PlayerArmor/BasicBoots.tres" id="10_wvr0k"]
+[ext_resource type="Resource" uid="uid://cx7pein0gc6r7" path="res://Scripts/PlayerArmor/BasicHelm.tres" id="11_dxay3"]
+[ext_resource type="Resource" uid="uid://cayqrn6yq50yn" path="res://Scripts/PlayerArmor/BasicGloves.tres" id="12_t4aac"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijmih"]
 bg_color = Color(1, 0.00784314, 0.054902, 1)
@@ -34,6 +38,10 @@ StartingSkills = [ExtResource("3_otcq3")]
 characterSkillScene = ExtResource("4_oom2w")
 equipedWep = ExtResource("5_i22ks")
 equipedItem = ExtResource("2_7aq14")
+equipedChest = ExtResource("9_rx5j0")
+equipedBoots = ExtResource("10_wvr0k")
+equipedHelm = ExtResource("11_dxay3")
+equipedGloves = ExtResource("12_t4aac")
 itemScene = ExtResource("7_ooqlj")
 
 [node name="CharacterSkill" parent="." instance=ExtResource("4_oom2w")]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ArmorBase" load_steps=2 format=3 uid="uid://cok4mpid2vrt0"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerArmor/ArmorBase.gd" id="1_bhnx1"]
+
+[resource]
+script = ExtResource("1_bhnx1")
+ArmorName = "Basic Chest Plate"
+ArmorDis = "tattered armor you found on the ground"
+def = 1
+mDef = 1
