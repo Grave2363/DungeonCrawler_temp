@@ -6,5 +6,6 @@
 script = ExtResource("1_bhnx1")
 ArmorName = "Basic Chest Plate"
 ArmorDis = "tattered armor you found on the ground"
+Cursesd = false
 def = 1
 mDef = 1
