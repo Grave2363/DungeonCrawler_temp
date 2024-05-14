@@ -6,5 +6,6 @@
 script = ExtResource("1_7n2jk")
 ArmorName = "Worn Boots"
 ArmorDis = "A set of well worn boots"
+Cursesd = false
 def = 1
 mDef = 1

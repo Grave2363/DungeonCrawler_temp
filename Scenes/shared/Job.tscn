@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://de3mo8qfb1lge"]
+[gd_scene load_steps=7 format=3 uid="uid://de3mo8qfb1lge"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/job.gd" id="1_kc8bu"]
 [ext_resource type="PackedScene" uid="uid://bvgnhdm5ubltv" path="res://Scenes/shared/CharacterSkills.tscn" id="2_0rksu"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" path="res://Scenes/shared/Stats.tscn" id="2_pq4uq"]
 [ext_resource type="Script" path="res://Scripts/Items/PlayerItem.gd" id="5_xjo21"]
 [ext_resource type="Script" path="res://Scripts/PlayerArmor/Armor.gd" id="6_hf88m"]
-[ext_resource type="Script" path="res://Scripts/PlayerArmor/ArmorBase.gd" id="7_x5yhv"]
 
 [node name="Job" type="Node"]
 script = ExtResource("1_kc8bu")
@@ -24,10 +23,10 @@ script = ExtResource("5_xjo21")
 script = ExtResource("6_hf88m")
 
 [node name="Boots" type="Node" parent="."]
-script = ExtResource("7_x5yhv")
+script = ExtResource("6_hf88m")
 
 [node name="Gloves" type="Node" parent="."]
-script = ExtResource("7_x5yhv")
+script = ExtResource("6_hf88m")
 
 [node name="Helm" type="Node" parent="."]
-script = ExtResource("7_x5yhv")
+script = ExtResource("6_hf88m")

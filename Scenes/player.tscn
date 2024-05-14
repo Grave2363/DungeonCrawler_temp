@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq37j53xehx71"]
+[gd_scene load_steps=3 format=3 uid="uid://cq37j53xehx71"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_20dq6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mdgrq"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_20dq6")
@@ -46,5 +48,10 @@ text = "Close"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 0.25
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_mdgrq")
 
 [connection signal="pressed" from="CanvasLayer/InventoryPopUp/Button" to="." method="_on_button_pressed"]

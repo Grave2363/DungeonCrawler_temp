@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvbxpm0x6i5d5"]
+
+[ext_resource type="Script" path="res://Scripts/Items/chest.gd" id="1_aosuk"]
+[ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="1_ugwpa"]
+[ext_resource type="Script" path="res://Scripts/Items/AnimationPlayer_chest.gd" id="3_602a5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfpti"]
+
+[sub_resource type="Animation" id="Animation_g2fnr"]
+resource_name = "Chest_open_temp"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0.239, 0.971)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8pm0a"]
+_data = {
+"Chest_open_temp": SubResource("Animation_g2fnr")
+}
+
+[node name="Chest" type="Node3D"]
+script = ExtResource("1_aosuk")
+
+[node name="StaticBody3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_xfpti")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_ugwpa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8pm0a")
+}
+script = ExtResource("3_602a5")
+
+[connection signal="area_shape_entered" from="StaticBody3D" to="." method="_on_static_body_3d_area_shape_entered"]
