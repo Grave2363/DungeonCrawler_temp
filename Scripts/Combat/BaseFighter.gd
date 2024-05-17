@@ -28,6 +28,8 @@ func initialize():
 	$Bars/MP.max_value = stats.max_Mp
 	$Bars/HP.value = stats.max_HP
 	$Bars/MP.value = stats.max_Mp
+	$Bars/HP/Player_HP.text = str(stats.max_HP)    
+	$Bars/MP/Player_MP.text = str(stats.max_Mp)
 
 func skillUsed(cost : int):
 	$Job/Stats.mp_spent(cost)
@@ -91,3 +93,7 @@ func levelup():
 
 func _on_job_health_empty():
 	emit_signal("died", self)
+
+
+func _on_battle_screen_attack_1(mp: int):
+	skillUsed(mp)

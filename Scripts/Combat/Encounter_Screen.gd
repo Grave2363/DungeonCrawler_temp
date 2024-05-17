@@ -93,8 +93,6 @@ func multi_battle_end():
 	if killedMob == 3:
 		emit_signal("endCombat")
 
-func _on_battle_screen_attack():
-	mobs[target].takingDmg(10)
 
 
 func _on_player_need_new_encounter():
@@ -128,3 +126,7 @@ func _on_battle_screen_prev_target():
 		target = size - 1
 	else :
 		target = target - 1
+
+
+func _on_battle_screen_attack_1(mp: int):
+	mobs[target].takingDmg(10)

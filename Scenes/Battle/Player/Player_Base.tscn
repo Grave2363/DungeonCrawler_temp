@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b4cqk3qwt5qyh"]
+[gd_scene load_steps=21 format=3 uid="uid://b4cqk3qwt5qyh"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/BaseFighter.gd" id="1_uyast"]
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="2_2eohw"]
@@ -22,6 +22,9 @@ bg_color = Color(1, 0.00784314, 0.054902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66soj"]
 bg_color = Color(0, 0.576471, 0.321569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ht20d"]
+bg_color = Color(0.952941, 0, 0.180392, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5y34"]
 bg_color = Color(0, 0.654902, 0.866667, 1)
@@ -75,16 +78,28 @@ max_value = 30.0
 value = 30.0
 show_percentage = false
 
+[node name="Player_HP" type="RichTextLabel" parent="Bars/HP"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 99.0
+offset_bottom = 22.0
+
 [node name="MP" type="ProgressBar" parent="Bars"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = -3.0
 offset_right = 97.0
 offset_bottom = 21.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ht20d")
 theme_override_styles/fill = SubResource("StyleBoxFlat_s5y34")
-max_value = 20.0
-value = 20.0
+max_value = 10.0
+value = 10.0
 show_percentage = false
+
+[node name="Player_MP" type="RichTextLabel" parent="Bars/MP"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 24.0
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -40.0

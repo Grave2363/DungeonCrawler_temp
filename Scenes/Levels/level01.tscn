@@ -394,7 +394,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
 
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
 [connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen" method="_on_player_need_new_encounter"]
-[connection signal="attack" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_attack"]
+[connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_attack_1"]
 [connection signal="nextTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_next_target"]
 [connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_prev_target"]
 [connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_running"]
