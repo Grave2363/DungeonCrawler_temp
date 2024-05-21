@@ -12,3 +12,9 @@ func initialize (wep :WepBase):
 	WepDis = wep.WepDis
 	atk = wep.atk
 	mAtk = wep.mAtk
+
+func new_equip (wep :WepBase):
+	WepName = wep.WepName
+	WepDis = wep.WepDis
+	atk = wep.atk
+	mAtk = wep.mAtk

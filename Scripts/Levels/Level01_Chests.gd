@@ -1,6 +1,6 @@
 extends Node3D
 
-
+signal Wep_change(new_wep:WepBase)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,5 +11,6 @@ func _process(delta):
 	pass
 
 
-func _on_chest_chest_opened():
-	pass # Replace with function body.
+
+func _on_chest_chest_opened(drop):
+	emit_signal("Wep_change", drop)

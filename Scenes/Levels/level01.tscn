@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://0vqy8ix8ppv7"]
+[gd_scene load_steps=11 format=3 uid="uid://0vqy8ix8ppv7"]
 
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_c8g1p"]
 [ext_resource type="Script" path="res://Scripts/Levels/level01.gd" id="1_oxxcn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bgaqajrd5iwg2" path="res://Scenes/Encounters/Level01/encounter_screen.tscn" id="7_btg0d"]
 [ext_resource type="PackedScene" uid="uid://cvbxpm0x6i5d5" path="res://assets/chest.tscn" id="8_1hj44"]
 [ext_resource type="Script" path="res://Scripts/Levels/Level01_Chests.gd" id="8_rlpak"]
+[ext_resource type="Resource" uid="uid://14sabpqnecl2" path="res://Scripts/weps/EnhancedSword.tres" id="10_h340x"]
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_oxxcn")
@@ -391,6 +392,7 @@ script = ExtResource("8_rlpak")
 
 [node name="Chest" parent="Chests" instance=ExtResource("8_1hj44")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
+loot = ExtResource("10_h340x")
 
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
 [connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen" method="_on_player_need_new_encounter"]
@@ -400,4 +402,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
 [connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_running"]
 [connection signal="endCombat" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_end_combat"]
 [connection signal="playerRan" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_player_ran"]
+[connection signal="Wep_change" from="Chests" to="Player/BattleScreen" method="_on_chests_wep_change"]
 [connection signal="Chest_Opened" from="Chests/Chest" to="Chests" method="_on_chest_chest_opened"]

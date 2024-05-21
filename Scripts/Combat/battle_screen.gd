@@ -56,3 +56,7 @@ func _on_target_right_pressed():
 
 func _on_target_left_pressed():
 	emit_signal("prevTarget")
+
+
+func _on_chests_wep_change(new_wep):
+	$Panel/Player_base/Job.wep_changed(new_wep)

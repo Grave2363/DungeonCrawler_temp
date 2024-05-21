@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WepBase" load_steps=2 format=3 uid="uid://14sabpqnecl2"]
+
+[ext_resource type="Script" path="res://Scripts/weps/WepBase.gd" id="1_iyaet"]
+
+[resource]
+script = ExtResource("1_iyaet")
+WepName = "Enhanced Sword"
+WepDis = "The rusty blade has  been altered by the laberynth, i tlooks to be closer to its original form"
+atk = 7
+mAtk = 3

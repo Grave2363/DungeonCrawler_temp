@@ -40,3 +40,8 @@ func _ready():
 
 func get_xp():
 	return startingStats.provided_xp
+
+func wep_changed(new_wep:WepBase):
+	equipedWep = new_wep
+	wep.new_equip(new_wep)
+	stats.initialize(startingStats, new_wep)
