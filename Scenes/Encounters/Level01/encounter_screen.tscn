@@ -10,3 +10,10 @@ offset_left = 4.0
 offset_top = 1.0
 offset_right = 1146.0
 offset_bottom = 336.0
+
+[node name="CombatDialouge" type="RichTextLabel" parent="."]
+offset_left = 363.0
+offset_top = 7.0
+offset_right = 713.0
+offset_bottom = 80.0
+text = "temp test"

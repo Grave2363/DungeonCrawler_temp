@@ -95,5 +95,5 @@ func _on_job_health_empty():
 	emit_signal("died", self)
 
 
-func _on_battle_screen_attack_1(mp: int):
+func _on_battle_screen_attack_1(mp: int, dmg : int):
 	skillUsed(mp)

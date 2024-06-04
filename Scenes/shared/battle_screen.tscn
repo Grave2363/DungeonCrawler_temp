@@ -84,6 +84,14 @@ text = "<- Target "
 [node name="Player_base" parent="Panel" instance=ExtResource("1_vgjic")]
 position = Vector2(335, 92)
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 47.0
+offset_right = 392.0
+offset_bottom = 94.0
+text = "Active Turn Temp"
+
 [connection signal="attack1" from="." to="Panel/Player_base" method="_on_battle_screen_attack_1"]
 [connection signal="pressed" from="Panel/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Panel/Run" to="." method="_on_run_pressed"]

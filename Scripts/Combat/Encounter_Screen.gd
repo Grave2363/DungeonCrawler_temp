@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal endCombat
 signal playerRan
+signal mob_turn_end
+signal mob_atk (dmg:int)
 const mob_01 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_Base.tscn")
 const mob_02 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_temp02.tscn")
 var fighter01 
@@ -128,5 +130,15 @@ func _on_battle_screen_prev_target():
 		target = target - 1
 
 
-func _on_battle_screen_attack_1(mp: int):
-	mobs[target].takingDmg(10)
+func _on_battle_screen_attack_1(mp: int, dmg: int):
+	mobs[target].takingDmg(dmg)
+
+
+func _on_turn_order_mob_turn():
+	for mob in mobs:
+		emit_signal("mob_atk", mob.dmg_calc()) 
+		var temp = mob.get_mob_name()
+		var dmgTemp = mob.dmg_calc()
+		$CombatDialouge.text = str(temp)  + " inflicted " +  str(dmgTemp) + " damage to player"
+		await get_tree().create_timer(1.0).timeout
+	emit_signal("mob_turn_end")
