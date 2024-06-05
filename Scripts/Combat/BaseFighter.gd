@@ -22,6 +22,9 @@ var selectable: bool = false
 var display_name: String
 var rng = RandomNumberGenerator.new()
 
+func _ready():
+	initialize()
+
 func initialize():
 	actions.initialize(skills.get_children())
 	$Bars/HP.max_value = stats.max_HP
@@ -36,17 +39,15 @@ func skillUsed(cost : int):
 	$Bars/MP.value = $Job/Stats.get_mp()
 
 func DmgTakenPhys(attack : int):
-	$Job/Stats.DmgTakenPhys(attack)
-	$Bars/HP.value =  $Job/Stats.get_hp()
+	$Bars/HP.value =  $Bars/HP.value - attack
 	emit_signal("tookDamange")
-	if $Job/Stats.get_hp() <= 0:
+	if $Bars/HP.value <= 0:
 		emit_signal("died", self)
 
 func DmgTakenMag(attack : int):
-	$Job/Stats.DmgTakenMag(attack)
-	$Bars/HP.value =  $Job/Stats.get_hp()
+	$Bars/HP.value =  $Bars/HP.value - attack
 	emit_signal("tookDamange")
-	if $Job/Stats.get_hp() <= 0:
+	if $Bars/HP.value <= 0:
 		emit_signal("died", self)
 
 func healing(heal : int):

@@ -54,7 +54,7 @@ func _on_attack_pressed():
 	$Panel/Attacks.visible = !$Panel/Attacks.visible
 
 func player_dmg_taken(dmg:int):
-	pass
+	$Panel/Player_base.DmgTakenPhys(dmg)
 
 func _on_target_right_pressed():
 	emit_signal("nextTarget")
