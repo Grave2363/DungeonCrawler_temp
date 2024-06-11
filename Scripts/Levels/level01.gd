@@ -24,3 +24,7 @@ func _on_battle_screen_player_turn_end():
 
 func _on_turn_order_player_turn():
 	$Player/BattleScreen.display_combat()
+
+
+func _on_area_3d_area_entered(area):
+	pass # Replace with function body.

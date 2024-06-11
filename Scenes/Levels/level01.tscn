@@ -633,6 +633,50 @@ script = ExtResource("6_oiv0n")
 [node name="Encounter_Screen" parent="Player" instance=ExtResource("7_btg0d")]
 visible = false
 
+[node name="GameOver" type="CanvasLayer" parent="Player"]
+visible = false
+
+[node name="Panel" type="Panel" parent="Player/GameOver"]
+offset_left = 252.0
+offset_top = 214.0
+offset_right = 827.0
+offset_bottom = 383.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player/GameOver/Panel"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 44.0
+offset_right = 354.0
+offset_bottom = 86.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Game Over"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player/GameOver/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.019
+offset_left = 126.0
+offset_top = 92.0
+offset_right = 417.075
+offset_bottom = 147.0
+alignment = 1
+
+[node name="LoadSave" type="Button" parent="Player/GameOver/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Latest Save"
+
+[node name="ToTitleScreen" type="Button" parent="Player/GameOver/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "To Title"
+
+[node name="Quit" type="Button" parent="Player/GameOver/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quit Game"
+
 [node name="Chests" type="Node3D" parent="."]
 script = ExtResource("8_rlpak")
 
@@ -640,6 +684,7 @@ script = ExtResource("8_rlpak")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
 loot = ExtResource("10_h340x")
 
+[connection signal="area_entered" from="Blocks/Door_to_next_level/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
 [connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen" method="_on_player_need_new_encounter"]
 [connection signal="mob_turn" from="Player/Turn_Order" to="Player/Encounter_Screen" method="_on_turn_order_mob_turn"]
