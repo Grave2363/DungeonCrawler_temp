@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://buopoio0ngwls"]
+[gd_scene load_steps=4 format=3 uid="uid://buopoio0ngwls"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/battle_screen.gd" id="1_lhgvm"]
 [ext_resource type="PackedScene" uid="uid://b4cqk3qwt5qyh" path="res://Scenes/Battle/Player/Player_Base.tscn" id="1_vgjic"]
+[ext_resource type="PackedScene" uid="uid://q2s0qiuj3y77" path="res://Scenes/Battle/Player/NPCs/NPC01.tscn" id="3_i4iyf"]
 
 [node name="BattleScreen" type="CanvasLayer"]
 script = ExtResource("1_lhgvm")
@@ -83,6 +84,10 @@ text = "<- Target "
 
 [node name="Player_base" parent="Panel" instance=ExtResource("1_vgjic")]
 position = Vector2(335, 92)
+
+[node name="npc_01" parent="Panel" instance=ExtResource("3_i4iyf")]
+visible = false
+position = Vector2(481, 93)
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
 layout_mode = 0

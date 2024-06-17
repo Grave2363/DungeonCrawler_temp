@@ -1,0 +1,113 @@
+[gd_scene load_steps=21 format=3 uid="uid://q2s0qiuj3y77"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/BaseFighter.gd" id="1_xg43b"]
+[ext_resource type="Resource" uid="uid://k1e4qhl6q6mh" path="res://Scripts/Items/standardPotion.tres" id="2_o8i28"]
+[ext_resource type="Resource" uid="uid://gfulb6nckr8w" path="res://Scripts/Combat/Crusader.tres" id="3_v7a5g"]
+[ext_resource type="Resource" uid="uid://3ltem2qyv7qg" path="res://Scripts/PlayerGrowths/BaseGrowths.tres" id="4_gmp5h"]
+[ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="5_iwgu5"]
+[ext_resource type="Resource" uid="uid://dcnapkka4y4qd" path="res://Scripts/MonsterAttacks/BasicAttacks/Punch.tres" id="6_bfh0q"]
+[ext_resource type="PackedScene" uid="uid://bvgnhdm5ubltv" path="res://Scenes/shared/CharacterSkills.tscn" id="7_bajqh"]
+[ext_resource type="Resource" uid="uid://bb0clwfeudf15" path="res://Scripts/weps/Sword.tres" id="8_ugdvq"]
+[ext_resource type="Resource" uid="uid://cok4mpid2vrt0" path="res://Scripts/PlayerArmor/BasicChest.tres" id="9_dmdmn"]
+[ext_resource type="Resource" uid="uid://cgy03lt8g0jlu" path="res://Scripts/PlayerArmor/BasicBoots.tres" id="10_m7jy4"]
+[ext_resource type="Resource" uid="uid://cx7pein0gc6r7" path="res://Scripts/PlayerArmor/BasicHelm.tres" id="11_dvhqe"]
+[ext_resource type="Resource" uid="uid://cayqrn6yq50yn" path="res://Scripts/PlayerArmor/BasicGloves.tres" id="12_m6u6g"]
+[ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="13_sfjpo"]
+[ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="14_xsdt2"]
+[ext_resource type="Script" path="res://Scripts/Combat/Actions.gd" id="15_0ecnt"]
+[ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="16_hshab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijmih"]
+bg_color = Color(1, 0.00784314, 0.054902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66soj"]
+bg_color = Color(0, 0.576471, 0.321569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ht20d"]
+bg_color = Color(0.952941, 0, 0.180392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5y34"]
+bg_color = Color(0, 0.654902, 0.866667, 1)
+
+[node name="Player_base" type="Node2D"]
+script = ExtResource("1_xg43b")
+special_item = ExtResource("2_o8i28")
+stats = ExtResource("3_v7a5g")
+growths = ExtResource("4_gmp5h")
+
+[node name="Job" parent="." instance=ExtResource("5_iwgu5")]
+startingStats = ExtResource("3_v7a5g")
+StartingSkills = [ExtResource("6_bfh0q")]
+characterSkillScene = ExtResource("7_bajqh")
+equipedWep = ExtResource("8_ugdvq")
+equipedItem = ExtResource("2_o8i28")
+equipedChest = ExtResource("9_dmdmn")
+equipedBoots = ExtResource("10_m7jy4")
+equipedHelm = ExtResource("11_dvhqe")
+equipedGloves = ExtResource("12_m6u6g")
+itemScene = ExtResource("13_sfjpo")
+
+[node name="CharacterSkill" parent="." instance=ExtResource("7_bajqh")]
+
+[node name="equips" parent="." instance=ExtResource("14_xsdt2")]
+
+[node name="Actions" type="Node" parent="."]
+script = ExtResource("15_0ecnt")
+skill_action_scene = ExtResource("7_bajqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 10)
+scale = Vector2(0.84375, 0.84375)
+texture = ExtResource("16_hshab")
+
+[node name="Bars" type="MenuBar" parent="."]
+offset_left = -39.0
+offset_top = -89.0
+offset_right = 57.0
+offset_bottom = -49.0
+
+[node name="HP" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 21.0
+offset_right = 97.0
+offset_bottom = 44.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ijmih")
+theme_override_styles/fill = SubResource("StyleBoxFlat_66soj")
+max_value = 30.0
+value = 30.0
+show_percentage = false
+
+[node name="Player_HP" type="RichTextLabel" parent="Bars/HP"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 23.0
+
+[node name="MP" type="ProgressBar" parent="Bars"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 97.0
+offset_bottom = 21.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ht20d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s5y34")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="Player_MP" type="RichTextLabel" parent="Bars/MP"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 24.0
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -40.0
+offset_top = 36.0
+offset_right = 62.0
+offset_bottom = 60.0
+
+[node name="Name" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 25.0
+text = "Player 01"
