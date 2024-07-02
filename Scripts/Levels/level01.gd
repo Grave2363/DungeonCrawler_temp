@@ -1,5 +1,6 @@
 extends Node3D
 
+var bossFought = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,4 +28,7 @@ func _on_turn_order_player_turn():
 
 
 func _on_area_3d_area_entered(area):
-	pass # Replace with function body.
+	if bossFought == false:
+		pass
+	else:
+		pass
