@@ -8,12 +8,21 @@ signal tookDamange(BaseFighter)
 @export var special_item : Resource
 @export var stats: Resource
 @export var growths : Resource
-# for nonplayer(s)
 @onready var actions = $Actions
 @onready var bars = $Bars
 @onready var skills = $CharacterSkill
+# job will be updated as player progresses
+#                          Hell touched husk        Scorched Soul        Hell Claimed Soul
+# will go from Soul Husk ->   or            then ->    or        then ->    or 
+#                           Dim husk               Radiant Soul          Redeemed Soul
+# journy will have the player confront embodyments of the 7 sins and choose their path
+# Redemption will be possible until the 6th boss, if player finds a temple and sacrifices the 
+# power gained from their choices
+# each choice will be after a boss fight
+# first 3 will give either a skill or companion with gear scattered in the maze
+# boss 4 - 6 will give skills and 7 will determin ending
 @onready var player_stats = $Job/Stats
-# for the nonplayer target(s)
+var Boss01_embraced : bool = false
 var xp_to_lvl = 30
 var level = 1
 var xp_gathered = 0
@@ -65,6 +74,9 @@ func xp_gained(xp : int):
 		level = level + 1
 		xp_to_lvl = xp_to_lvl * level
 		levelup()
+
+func boss01_choice(what: bool):
+	Boss01_embraced = what
 
 func levelup():
 	randomize()
