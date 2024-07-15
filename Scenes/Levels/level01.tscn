@@ -875,6 +875,7 @@ script = ExtResource("8_rlpak")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
 loot = ExtResource("10_h340x")
 
+[connection signal="bossFight" from="." to="Player" method="_on_level_boss_fight"]
 [connection signal="bossFight" from="." to="Player/Encounter_Screen01" method="_on_level_boss_fight"]
 [connection signal="area_entered" from="Blocks/Boss_Tile/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="Blocks/Door_to_next_level/Area3D" to="." method="_on_area_3d_area_entered"]

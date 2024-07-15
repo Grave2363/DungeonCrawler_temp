@@ -35,7 +35,6 @@ func _on_area_3d_area_entered(area):
 
 
 func _on_encounter_screen_01_boss_fight_activated():
-	new_encounter()
-	$Player/BattleScreen.display_combat()
 	bossFought = true
 	$Player/BattleScreen.BossFight(bossFought)
+

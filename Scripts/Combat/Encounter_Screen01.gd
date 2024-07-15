@@ -95,6 +95,7 @@ func on_multi_mob_death():
 
 func multi_battle_end():
 	if killedMob == 3:
+		mobs = []
 		emit_signal("endCombat")
 
 
@@ -116,6 +117,7 @@ func _on_battle_screen_running():
 		$Panel.get_child(x).queue_free()
 		mobs.remove_at(x)
 		x = x + 1
+	mobs = []
 	emit_signal("playerRan")
 
 

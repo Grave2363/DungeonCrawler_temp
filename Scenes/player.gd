@@ -109,3 +109,9 @@ func _on_encounter_screen_end_combat():
 
 func _on_encounter_screen_player_ran():
 	flee_fight()
+
+
+func _on_level_boss_fight():
+	emit_signal("encounter_start")
+	inFight = true
+	encountersOn = false
