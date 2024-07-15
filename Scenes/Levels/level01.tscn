@@ -888,6 +888,7 @@ loot = ExtResource("10_h340x")
 [connection signal="player_turn_end" from="Player/BattleScreen" to="Player/Turn_Order" method="_on_battle_screen_player_turn_end"]
 [connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_prev_target"]
 [connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_running"]
+[connection signal="boss_fight_activated" from="Player/Encounter_Screen01" to="." method="_on_encounter_screen_01_boss_fight_activated"]
 [connection signal="endCombat" from="Player/Encounter_Screen01" to="Player" method="_on_encounter_screen_end_combat"]
 [connection signal="mob_atk" from="Player/Encounter_Screen01" to="Player/BattleScreen" method="_on_encounter_screen_mob_atk"]
 [connection signal="mob_turn_end" from="Player/Encounter_Screen01" to="Player/Turn_Order" method="_on_encounter_screen_mob_turn_end"]

@@ -4,6 +4,7 @@ signal attack1(mp: int, dmg: int)
 signal nextTarget
 signal prevTarget
 signal player_turn_end
+var inBossFight = false
 var players = []
 var attack01_player = Button.new()
 var atk01Cost_player = 0
@@ -43,8 +44,12 @@ func battleWon(xp):
 	$Panel/Player_base.xp_gained(xp)
 
 func _on_run_pressed():
-	emit_signal("running")
-	command_disable()
+	if inBossFight == false:
+		emit_signal("running")
+		command_disable()
+
+func BossFight(fight : bool):
+	inBossFight = fight
 
 func display_combat():
 	$Panel/Attack.visible = true

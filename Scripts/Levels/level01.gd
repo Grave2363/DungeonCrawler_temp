@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 func new_encounter():
-	$Player/Encounter_Screen.visible = !$Player/Encounter_Screen.visible
+	$Player/Encounter_Screen01.visible = !$Player/Encounter_Screen01.visible
 
 func _on_player_encounter_start():
 	new_encounter()
@@ -32,3 +32,10 @@ func _on_area_3d_area_entered(area):
 		emit_signal("bossFight")
 	else:
 		pass
+
+
+func _on_encounter_screen_01_boss_fight_activated():
+	new_encounter()
+	$Player/BattleScreen.display_combat()
+	bossFought = true
+	$Player/BattleScreen.BossFight(bossFought)

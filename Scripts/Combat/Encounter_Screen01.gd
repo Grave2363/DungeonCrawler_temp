@@ -4,8 +4,10 @@ signal endCombat
 signal playerRan
 signal mob_turn_end
 signal mob_atk (dmg:int)
+signal boss_fight_activated
 const mob_01 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_Base.tscn")
 const mob_02 : PackedScene = preload("res://Scenes/Battle/Mobs/Mob_temp02.tscn")
+const boss_01: PackedScene = preload("res://Scenes/Battle/Bosses/Boss01.tscn")
 var fighter01 
 var fighter02
 var fighter03
@@ -101,8 +103,10 @@ func _on_player_need_new_encounter():
 	var mob_num = rng.randf_range(0, 60)
 	if mob_num <= 30:
 		single_encounter()
+		target = 0
 	else: if mob_num > 30:
 		multi_encounter()
+		target = 0
 
 
 func _on_battle_screen_running():
@@ -145,4 +149,19 @@ func _on_turn_order_mob_turn():
 
 
 func _on_level_boss_fight():
-	pass # Replace with function body.
+	var x = 0
+	var temp = mobs.size()
+	while x < temp:
+		$Panel.get_child(x).queue_free()
+		mobs.remove_at(x)
+		x = x + 1
+		if x > mobs.size():
+			break
+	mobXP = 0
+	fighter01 = boss_01.instantiate()
+	mobXP = fighter01.get_xp()
+	fighter01.set_position(Vector2(308,246))
+	fighter01.connect("dead", _on_mob_base_dead)
+	$Panel.add_child(fighter01)
+	mobs.append(fighter01)
+	emit_signal("boss_fight_activated")

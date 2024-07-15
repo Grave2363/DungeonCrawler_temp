@@ -31,15 +31,15 @@ func _process(delta):
 
 func end_fight():
 	inFight = false
-	$Encounter_Screen.visible = false
+	$Encounter_Screen01.visible = false
 	$BattleScreen.command_disable()
 	encounterCDTimer.start()
-	$BattleScreen.battleWon($Encounter_Screen.get_xp())
+	$BattleScreen.battleWon($Encounter_Screen01.get_xp())
 	emit_signal("need_new_encounter")
 
 func flee_fight():
 	inFight = false
-	$Encounter_Screen.visible = false
+	$Encounter_Screen01.visible = false
 	$BattleScreen.command_disable()
 	encounterCDTimer.start()
 	emit_signal("need_new_encounter")
