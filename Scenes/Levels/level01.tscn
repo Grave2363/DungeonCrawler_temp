@@ -506,6 +506,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+east_face = 0
 south_face = 0
 top_face = 5
 bottom_face = 20
@@ -515,6 +516,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -24)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+east_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -536,6 +538,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -28)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+east_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -564,6 +567,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
 north_face = 0
+east_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -572,12 +576,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -30)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
-north_face = 6
+north_face = 0
 top_face = 5
 bottom_face = 20
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock48"]
-light_energy = 0.5
 
 [node name="LevelBlock49" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -30)
@@ -585,6 +586,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
 north_face = 0
+west_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -593,10 +595,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -30)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
-north_face = 0
+north_face = 6
 east_face = 0
 top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock50"]
+light_energy = 0.5
 
 [node name="LevelBlock51" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -28)
@@ -636,9 +641,12 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
 east_face = 0
-south_face = 0
+south_face = 6
 top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock54"]
+light_energy = 0.5
 
 [node name="LevelBlock55" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -22)
@@ -646,6 +654,7 @@ script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
 south_face = 0
+west_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -654,12 +663,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -22)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
-south_face = 6
+south_face = 0
 top_face = 5
 bottom_face = 20
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock56"]
-light_energy = 0.5
 
 [node name="LevelBlock57" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -24)
@@ -674,8 +680,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -26)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+north_face = 6
+south_face = 6
 top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock58"]
 
 [node name="LevelBlock59" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -28)
@@ -690,6 +700,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -28)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+west_face = 0
 top_face = 5
 bottom_face = 20
 
@@ -706,6 +717,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -24)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
+west_face = 0
 top_face = 5
 bottom_face = 20
 
