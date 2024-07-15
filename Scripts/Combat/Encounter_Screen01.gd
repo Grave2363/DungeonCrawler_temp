@@ -142,3 +142,7 @@ func _on_turn_order_mob_turn():
 		$CombatDialouge.text = str(temp)  + " inflicted " +  str(dmgTemp) + " damage to player"
 		await get_tree().create_timer(1.0).timeout
 	emit_signal("mob_turn_end")
+
+
+func _on_level_boss_fight():
+	pass # Replace with function body.

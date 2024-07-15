@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgaqajrd5iwg2"]
 
-[ext_resource type="Script" path="res://Scripts/Combat/Encounter_Screen.gd" id="1_ehut2"]
+[ext_resource type="Script" path="res://Scripts/Combat/Encounter_Screen01.gd" id="1_ehut2"]
 
 [node name="Encounter_Screen" type="CanvasLayer"]
 script = ExtResource("1_ehut2")

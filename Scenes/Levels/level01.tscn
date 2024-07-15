@@ -496,10 +496,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -22)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
-south_face = 0
+south_face = 6
 west_face = 0
 top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock40"]
+light_energy = 0.5
 
 [node name="LevelBlock41" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22)
@@ -556,10 +559,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
 script = ExtResource("1_c8g1p")
 material = ExtResource("2_uhukn")
 texture_sheet = ExtResource("4_o0r33")
-north_face = 0
+north_face = 6
 west_face = 0
 top_face = 5
 bottom_face = 20
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Blocks/LevelBlock46"]
+light_energy = 0.5
 
 [node name="LevelBlock47" type="Node3D" parent="Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -30)
@@ -815,7 +821,7 @@ script = ExtResource("6_oiv0n")
 
 [node name="BattleScreen" parent="Player" instance=ExtResource("6_liitv")]
 
-[node name="Encounter_Screen" parent="Player" instance=ExtResource("7_btg0d")]
+[node name="Encounter_Screen01" parent="Player" instance=ExtResource("7_btg0d")]
 visible = false
 
 [node name="GameOver" type="CanvasLayer" parent="Player"]
@@ -869,21 +875,22 @@ script = ExtResource("8_rlpak")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -8)
 loot = ExtResource("10_h340x")
 
+[connection signal="bossFight" from="." to="Player/Encounter_Screen01" method="_on_level_boss_fight"]
 [connection signal="area_entered" from="Blocks/Boss_Tile/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="Blocks/Door_to_next_level/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
-[connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen" method="_on_player_need_new_encounter"]
-[connection signal="mob_turn" from="Player/Turn_Order" to="Player/Encounter_Screen" method="_on_turn_order_mob_turn"]
+[connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen01" method="_on_player_need_new_encounter"]
+[connection signal="mob_turn" from="Player/Turn_Order" to="Player/Encounter_Screen01" method="_on_turn_order_mob_turn"]
 [connection signal="player_turn" from="Player/Turn_Order" to="." method="_on_turn_order_player_turn"]
-[connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_attack_1"]
-[connection signal="nextTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_next_target"]
+[connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_attack_1"]
+[connection signal="nextTarget" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_next_target"]
 [connection signal="player_turn_end" from="Player/BattleScreen" to="." method="_on_battle_screen_player_turn_end"]
 [connection signal="player_turn_end" from="Player/BattleScreen" to="Player/Turn_Order" method="_on_battle_screen_player_turn_end"]
-[connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_prev_target"]
-[connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen" method="_on_battle_screen_running"]
-[connection signal="endCombat" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_end_combat"]
-[connection signal="mob_atk" from="Player/Encounter_Screen" to="Player/BattleScreen" method="_on_encounter_screen_mob_atk"]
-[connection signal="mob_turn_end" from="Player/Encounter_Screen" to="Player/Turn_Order" method="_on_encounter_screen_mob_turn_end"]
-[connection signal="playerRan" from="Player/Encounter_Screen" to="Player" method="_on_encounter_screen_player_ran"]
+[connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_prev_target"]
+[connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_running"]
+[connection signal="endCombat" from="Player/Encounter_Screen01" to="Player" method="_on_encounter_screen_end_combat"]
+[connection signal="mob_atk" from="Player/Encounter_Screen01" to="Player/BattleScreen" method="_on_encounter_screen_mob_atk"]
+[connection signal="mob_turn_end" from="Player/Encounter_Screen01" to="Player/Turn_Order" method="_on_encounter_screen_mob_turn_end"]
+[connection signal="playerRan" from="Player/Encounter_Screen01" to="Player" method="_on_encounter_screen_player_ran"]
 [connection signal="Wep_change" from="Chests" to="Player/BattleScreen" method="_on_chests_wep_change"]
 [connection signal="Chest_Opened" from="Chests/Chest" to="Chests" method="_on_chest_chest_opened"]

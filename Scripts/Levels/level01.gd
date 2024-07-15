@@ -1,5 +1,5 @@
 extends Node3D
-
+signal bossFight
 var bossFought = false
 
 # Called when the node enters the scene tree for the first time.
@@ -29,6 +29,6 @@ func _on_turn_order_player_turn():
 
 func _on_area_3d_area_entered(area):
 	if bossFought == false:
-		pass
+		emit_signal("bossFight")
 	else:
 		pass
