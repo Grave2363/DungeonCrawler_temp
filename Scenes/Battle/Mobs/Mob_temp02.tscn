@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dopwpohpafw13"]
 
-[ext_resource type="Script" path="res://Scripts/Combat/Mob_Base.gd" id="1_ffut8"]
+[ext_resource type="Script" path="res://Scripts/Combat/Mobs/Mob_Base.gd" id="1_ji6ld"]
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="2_60fjh"]
 [ext_resource type="Resource" uid="uid://6skvg06r5ppm" path="res://Scripts/monsterJobs/Slime.tres" id="3_7d8ns"]
 [ext_resource type="Resource" uid="uid://dcnapkka4y4qd" path="res://Scripts/MonsterAttacks/BasicAttacks/Punch.tres" id="4_gvimm"]
@@ -22,7 +22,7 @@ bg_color = Color(0, 0.576471, 0.321569, 1)
 bg_color = Color(0, 0.654902, 0.866667, 1)
 
 [node name="MobBase" type="Node2D"]
-script = ExtResource("1_ffut8")
+script = ExtResource("1_ji6ld")
 
 [node name="Job" parent="." instance=ExtResource("2_60fjh")]
 startingStats = ExtResource("3_7d8ns")

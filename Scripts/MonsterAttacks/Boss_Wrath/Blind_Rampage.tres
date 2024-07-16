@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://bttsg1snpamum"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_c3ruy"]
+
+[resource]
+script = ExtResource("1_c3ruy")
+skillName = "Blind Rampage"
+skillDis = "Blinded by rage, the user lashes out all around them"
+dmgType = "Physical"
+level_unlock = 0
+healing = 0
+mpCost = 0
+power = 5
+hitChance = 75
+targetable = false
