@@ -15,6 +15,4 @@ class_name StartingStats
 # used for evasion
 @export var spd : int 
 #player only stats
-@export var pureSoul : int
-@export var darkSoul : int
 @export var isPlayer : bool

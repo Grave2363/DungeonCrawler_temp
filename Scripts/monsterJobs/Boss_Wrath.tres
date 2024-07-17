@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://cuttqlky27x7c"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_yrajh"]
+
+[resource]
+script = ExtResource("1_yrajh")
+job_name = "Wrath"
+level = 0
+provided_xp = 250
+max_HP = 200
+max_Mp = 100
+atk = 15
+def = 4
+mDef = 4
+mAtk = 15
+spd = 0
+isPlayer = false
