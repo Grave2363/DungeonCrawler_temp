@@ -87,3 +87,7 @@ func _on_chests_wep_change(new_wep):
 
 func _on_encounter_screen_mob_atk(dmg):
 	player_dmg_taken(dmg)
+
+
+func _on_level_resting():
+	$Panel/Player_base.fullHeal()

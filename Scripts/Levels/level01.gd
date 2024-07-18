@@ -1,5 +1,6 @@
 extends Node3D
 signal bossFight
+signal resting
 var bossFought = false
 
 # Called when the node enters the scene tree for the first time.
@@ -38,3 +39,16 @@ func _on_encounter_screen_01_boss_fight_activated():
 	bossFought = true
 	$Player/BattleScreen.BossFight(bossFought)
 
+
+
+func _on_points_of_rest_popup_rest():
+	$Player/RestPopup.visible = true
+
+
+func _on_rest_no_pressed():
+	$Player/RestPopup.visible = false
+
+
+func _on_rest_yes_pressed():
+	$Player/RestPopup.visible = false
+	emit_signal("resting")

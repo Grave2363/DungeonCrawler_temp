@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://e74oeyc11enc"]
+
+[ext_resource type="Script" path="res://Scripts/PointOfRest.gd" id="1_gtkg3"]
+[ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="2_v4o4w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mb3x"]
+
+[node name="PointOfRest" type="Node3D"]
+script = ExtResource("1_gtkg3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("2_v4o4w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D"]
+light_energy = 0.5
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_3mb3x")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

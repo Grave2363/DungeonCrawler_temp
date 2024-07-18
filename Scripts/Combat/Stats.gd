@@ -84,3 +84,7 @@ func healing(val):
 	hp += val
 	emit_signal("HelathChange", val)
 
+func fullHeal():
+	hp = max_HP
+	mp = max_Mp
+

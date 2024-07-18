@@ -56,12 +56,20 @@ func DmgTakenPhys(attack : int):
 func DmgTakenMag(attack : int):
 	$Bars/HP.value =  $Bars/HP.value - attack
 	emit_signal("tookDamange")
+	$Bars/HP/Player_HP.text = str($Bars/HP.value)
 	if $Bars/HP.value <= 0:
 		emit_signal("died", self)
 
 func healing(heal : int):
 	$Job/Stats.healing(heal)
 	$Bars/HP.value =  $Job/Stats.get_hp()
+	$Bars/HP/Player_HP.text = str($Bars/HP.value)
+
+func fullHeal():
+	$Bars/HP.value =  $Bars/HP.max_value
+	$Bars/HP/Player_HP.text = str($Bars/HP.value)
+	$Bars/MP.value = $Bars/MP.max_value
+	$Bars/MP/Player_MP.text = str($Bars/MP.value)
 
 func _on_health_depleted():
 	selectable = false
