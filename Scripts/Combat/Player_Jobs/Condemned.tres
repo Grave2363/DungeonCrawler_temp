@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://cekdjl60iu25p"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_7wonk"]
+
+[resource]
+script = ExtResource("1_7wonk")
+job_name = "Condemned Soul"
+level = 1
+provided_xp = 0
+max_HP = 66
+max_Mp = 26
+atk = 16
+def = 9
+mDef = 9
+mAtk = 16
+spd = 16
+isPlayer = true

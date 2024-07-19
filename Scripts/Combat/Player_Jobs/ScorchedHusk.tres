@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://qf6gxs2ruwc3"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_02ui7"]
+
+[resource]
+script = ExtResource("1_02ui7")
+job_name = "Hell Touched Husk"
+level = 1
+provided_xp = 0
+max_HP = 50
+max_Mp = 10
+atk = 4
+def = 3
+mDef = 3
+mAtk = 3
+spd = 6
+isPlayer = true

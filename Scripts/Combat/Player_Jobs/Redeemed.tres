@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://dqtedw1v6vik"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_mli7g"]
+
+[resource]
+script = ExtResource("1_mli7g")
+job_name = "Redeemed Soul"
+level = 1
+provided_xp = 0
+max_HP = 90
+max_Mp = 35
+atk = 13
+def = 10
+mDef = 12
+mAtk = 13
+spd = 17
+isPlayer = true

@@ -12,9 +12,9 @@ signal tookDamange(BaseFighter)
 @onready var bars = $Bars
 @onready var skills = $CharacterSkill
 # job will be updated as player progresses
-#                          Hell touched husk        Scorched Soul        Hell Claimed Soul
-# will go from Soul Husk ->   or            then ->    or        then ->    or 
-#                           Dim husk               Radiant Soul          Redeemed Soul
+#                          Hell touched husk        Scorched Soul        Hellish Soul
+# will go from Soul Husk ->   or            then ->    or        then ->    or  
+#                           Dim husk               Illuminated Soul       Radiant Soul
 # journy will have the player confront embodyments of the 7 sins and choose their path
 # Redemption will be possible until the 6th boss, if player finds a temple and sacrifices the 
 # power gained from their choices

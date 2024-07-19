@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://n5kqnoh1euqf"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_1gs1g"]
+
+[resource]
+script = ExtResource("1_1gs1g")
+job_name = "Scorched Husk"
+level = 1
+provided_xp = 0
+max_HP = 52
+max_Mp = 13
+atk = 6
+def = 5
+mDef = 5
+mAtk = 5
+spd = 7
+isPlayer = true

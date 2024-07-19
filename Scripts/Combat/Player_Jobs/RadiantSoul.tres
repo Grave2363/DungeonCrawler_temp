@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://b2fj7dw68wgxa"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_iskxe"]
+
+[resource]
+script = ExtResource("1_iskxe")
+job_name = "Illuminated Husk"
+level = 1
+provided_xp = 0
+max_HP = 60
+max_Mp = 20
+atk = 6
+def = 5
+mDef = 5
+mAtk = 7
+spd = 8
+isPlayer = true

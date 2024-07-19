@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://bbr4uro2ycchq"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_pt411"]
+
+[resource]
+script = ExtResource("1_pt411")
+job_name = "Dim Husk"
+level = 1
+provided_xp = 0
+max_HP = 55
+max_Mp = 15
+atk = 5
+def = 3
+mDef = 3
+mAtk = 4
+spd = 6
+isPlayer = true

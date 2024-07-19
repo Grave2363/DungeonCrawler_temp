@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StartingStats" load_steps=2 format=3 uid="uid://c2a20muw4if3i"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/startingstat.gd" id="1_20sjg"]
+
+[resource]
+script = ExtResource("1_20sjg")
+job_name = "Soul Husk"
+level = 1
+provided_xp = 0
+max_HP = 50
+max_Mp = 10
+atk = 3
+def = 2
+mDef = 2
+mAtk = 2
+spd = 4
+isPlayer = true
