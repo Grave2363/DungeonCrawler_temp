@@ -49,6 +49,7 @@ func skillUsed(cost : int):
 
 func DmgTakenPhys(attack : int):
 	$Bars/HP.value =  $Bars/HP.value - attack
+	$Bars/HP/Player_HP.text = str($Bars/HP.value - attack)
 	emit_signal("tookDamange")
 	if $Bars/HP.value <= 0:
 		emit_signal("died", self)
