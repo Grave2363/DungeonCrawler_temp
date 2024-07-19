@@ -1,12 +1,13 @@
 extends Node3D
 signal bossFight
 signal resting
+# boss fight toggle, mainly for testing as player will not return
 var bossFought = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -52,3 +53,16 @@ func _on_rest_no_pressed():
 func _on_rest_yes_pressed():
 	$Player/RestPopup.visible = false
 	emit_signal("resting")
+
+
+func _on_next_area_area_entered(area):
+	$LeaveArea.visible = true
+
+
+func _on_leave_yes_pressed():
+	$LeaveArea.visible = false
+	get_tree().change_scene_to_file("res://Scenes/Levels/Test_Room.tscn")
+
+
+func _on_leave_no_pressed():
+	$LeaveArea.visible = false

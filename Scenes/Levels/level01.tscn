@@ -636,9 +636,9 @@ east_face = 10
 top_face = 5
 bottom_face = 20
 
-[node name="Area3D" type="Area3D" parent="Blocks/Door_to_next_level"]
+[node name="NextArea" type="Area3D" parent="Blocks/Door_to_next_level"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blocks/Door_to_next_level/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blocks/Door_to_next_level/NextArea"]
 shape = SubResource("BoxShape3D_y38bx")
 
 [node name="LevelBlock53" type="Node3D" parent="Blocks"]
@@ -943,11 +943,62 @@ script = ExtResource("12_qwijh")
 [node name="PointOfRest" parent="Points of Rest" instance=ExtResource("13_uwj3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.5, -28)
 
+[node name="LeaveArea" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="LeaveArea"]
+offset_left = 213.0
+offset_top = 238.0
+offset_right = 926.0
+offset_bottom = 414.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LeaveArea/Panel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 28.0
+offset_right = 538.0
+offset_bottom = 104.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Would you like to move to the next area?[center]"
+
+[node name="Leave_Yes" type="Button" parent="LeaveArea/Panel"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 99.0
+offset_right = 241.0
+offset_bottom = 152.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LeaveArea/Panel/Leave_Yes"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]YES[center]"
+
+[node name="Leave_No" type="Button" parent="LeaveArea/Panel"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 94.0
+offset_right = 556.0
+offset_bottom = 147.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LeaveArea/Panel/Leave_No"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]NO[center]"
+
 [connection signal="bossFight" from="." to="Player" method="_on_level_boss_fight"]
 [connection signal="bossFight" from="." to="Player/Encounter_Screen01" method="_on_level_boss_fight"]
 [connection signal="resting" from="." to="Player/BattleScreen" method="_on_level_resting"]
 [connection signal="area_entered" from="Blocks/Boss_Tile/Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="area_entered" from="Blocks/Door_to_next_level/Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_entered" from="Blocks/Door_to_next_level/NextArea" to="." method="_on_next_area_area_entered"]
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
 [connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen01" method="_on_player_need_new_encounter"]
 [connection signal="mob_turn" from="Player/Turn_Order" to="Player/Encounter_Screen01" method="_on_turn_order_mob_turn"]
@@ -969,3 +1020,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.5, -28)
 [connection signal="Chest_Opened" from="Chests/Chest" to="Chests" method="_on_chest_chest_opened"]
 [connection signal="popupRest" from="Points of Rest" to="." method="_on_points_of_rest_popup_rest"]
 [connection signal="willYouRest" from="Points of Rest/PointOfRest" to="Points of Rest" method="_on_point_of_rest_will_you_rest"]
+[connection signal="pressed" from="LeaveArea/Panel/Leave_Yes" to="." method="_on_leave_yes_pressed"]
+[connection signal="pressed" from="LeaveArea/Panel/Leave_No" to="." method="_on_leave_no_pressed"]
