@@ -4,6 +4,7 @@ signal attack1(mp: int, dmg: int)
 signal nextTarget
 signal prevTarget
 signal player_turn_end
+signal healer_turn_over
 var inBossFight = false
 var players = []
 var attack01_player = Button.new()
@@ -16,15 +17,25 @@ var skillArray_npc01 = [attack01_npc01]
 var costArray_npc01 = [atk01Cost_npc01]
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	createPlayer_Atks()
+	players.append($Panel/Player_base)
+	players.append($Panel/npc_01)
+
+func createPlayer_Atks():
 	atk01Cost_player = $Panel/Player_base/Job/CharacterSkill.get_child(0).mpCost 
 	attack01_player.text = $Panel/Player_base/Job/CharacterSkill.get_child(0).name + "  MP : " + str(atk01Cost_player)
 	attack01_player.set_position(Vector2(20,20))
 	attack01_player.set_size(Vector2(80,20))
-	$Panel/Attacks.add_child(attack01_player)
+	$Panel/Attacks_Player.add_child(attack01_player)
 	attack01_player.connect("pressed", on_attack01_pressed)
-	players.append($Panel/Player_base)
-	if $Panel/npc_01.visible == true:
-		players.append($Panel/npc_01)
+
+func createNpc01_atk():
+	atk01Cost_npc01 = $Panel/Npc01/Job/CharacterSkill.get_child(0).mpCost 
+	attack01_npc01.text = $Panel/Npc01/Job/CharacterSkill.get_child(0).name + "  MP : " + str(atk01Cost_npc01)
+	attack01_npc01.set_position(Vector2(20,20))
+	attack01_npc01.set_size(Vector2(80,20))
+	$Panel/Attacks_Healer.add_child(attack01_player)
+	attack01_npc01.connect("pressed", on_Npc01_attack01_pressed)
 
 func on_attack01_pressed():
 	var atk01Pow = $Panel/Player_base/Job/CharacterSkill.get_child(0).power
@@ -33,8 +44,18 @@ func on_attack01_pressed():
 	emit_signal("attack1", atk01Cost_player,totalDmg)
 	player_turns_over()
 
+func on_Npc01_attack01_pressed():
+	var atk01Pow = $Panel/Npc01/Job/CharacterSkill.get_child(0).power
+	var playerAtk = $Panel/Npc01/Job/Stats.get_atk()
+	var totalDmg = atk01Pow + playerAtk
+	emit_signal("attack1", atk01Cost_player,totalDmg)
+	healer_turns_over()
+
 func player_turns_over():
 	emit_signal("player_turn_end")
+
+func healer_turns_over():
+	emit_signal("healer_turn_over")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -62,13 +83,21 @@ func command_disable():
 	$Panel/Attack.visible = false
 	$Panel/Run.visible = false
 	$Panel/Guard.visible = false
-	$Panel/Attacks.visible = false
+	$Panel/Attacks_Player.visible = false
+	$Panel/Attacks_Healer.visible = false
 	$Panel/Target_left.visible = false
 	$Panel/Target_right.visible = false
 
+func healer_turn():
+	$Panel/Attacks_Healer.visible = true
+	$Panel/Attack.visible = true
+	$Panel/Run.visible = true
+	$Panel/Guard.visible = true
+	$Panel/Target_left.visible = true
+	$Panel/Target_right.visible = true
 
 func _on_attack_pressed():
-	$Panel/Attacks.visible = !$Panel/Attacks.visible
+	$Panel/Attacks_Player.visible = !$Panel/Attacks_Player.visible
 
 func player_dmg_taken(dmg:int):
 	$Panel/Player_base.DmgTakenPhys(dmg)
@@ -91,3 +120,7 @@ func _on_encounter_screen_mob_atk(dmg):
 
 func _on_level_resting():
 	$Panel/Player_base.fullHeal()
+
+# game over
+func _on_player_base_died(BaseFighter):
+	pass # Replace with function body.

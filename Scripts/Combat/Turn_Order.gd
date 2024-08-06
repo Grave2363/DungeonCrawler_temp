@@ -10,8 +10,13 @@ func _process(delta):
 	pass
 
 func _on_battle_screen_player_turn_end():
-	emit_signal("mob_turn")
+	pass
+	#emit_signal("mob_turn")
 
 
 func _on_encounter_screen_mob_turn_end():
 	emit_signal("player_turn")
+
+
+func _on_battle_screen_healer_turn_over():
+	pass # Replace with function body.

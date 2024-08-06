@@ -23,6 +23,7 @@ func _on_player_encounter_start():
 
 func _on_battle_screen_player_turn_end():
 	$Player/BattleScreen.command_disable()
+	$Player/BattleScreen.healer_turn()
 
 
 func _on_turn_order_player_turn():
@@ -66,3 +67,7 @@ func _on_leave_yes_pressed():
 
 func _on_leave_no_pressed():
 	$LeaveArea.visible = false
+
+
+func _on_battle_screen_healer_turn_over():
+	$Player/BattleScreen.command_disable()

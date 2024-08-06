@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Combat/battle_screen.gd" id="1_lhgvm"]
 [ext_resource type="PackedScene" uid="uid://b4cqk3qwt5qyh" path="res://Scenes/Battle/Player/Player_Base.tscn" id="1_vgjic"]
-[ext_resource type="PackedScene" uid="uid://q2s0qiuj3y77" path="res://Scenes/Battle/Player/NPCs/NPC01.tscn" id="3_i4iyf"]
+[ext_resource type="PackedScene" uid="uid://df5itkbyxn4hh" path="res://Scenes/Battle/Player/NPCs/NPC01.tscn" id="3_i4iyf"]
 
 [node name="BattleScreen" type="CanvasLayer"]
 script = ExtResource("1_lhgvm")
@@ -56,7 +56,15 @@ offset_right = 1123.0
 offset_bottom = 80.0
 text = "Bag"
 
-[node name="Attacks" type="Panel" parent="Panel"]
+[node name="Attacks_Player" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 12.0
+offset_top = -136.0
+offset_right = 1125.0
+offset_bottom = -8.0
+
+[node name="Attacks_Healer" type="Panel" parent="Panel"]
 visible = false
 layout_mode = 0
 offset_left = 12.0
@@ -85,9 +93,8 @@ text = "<- Target "
 [node name="Player_base" parent="Panel" instance=ExtResource("1_vgjic")]
 position = Vector2(335, 92)
 
-[node name="npc_01" parent="Panel" instance=ExtResource("3_i4iyf")]
-visible = false
-position = Vector2(481, 93)
+[node name="Npc01" parent="Panel" instance=ExtResource("3_i4iyf")]
+position = Vector2(469, 92)
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
@@ -102,3 +109,4 @@ text = "Active Turn Temp"
 [connection signal="pressed" from="Panel/Run" to="." method="_on_run_pressed"]
 [connection signal="pressed" from="Panel/Target_right" to="." method="_on_target_right_pressed"]
 [connection signal="pressed" from="Panel/Target_left" to="." method="_on_target_left_pressed"]
+[connection signal="died" from="Panel/Player_base" to="." method="_on_player_base_died"]
