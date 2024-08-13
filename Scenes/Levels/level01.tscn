@@ -1002,6 +1002,7 @@ text = "[center]NO[center]"
 [connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
 [connection signal="need_new_encounter" from="Player" to="Player/Encounter_Screen01" method="_on_player_need_new_encounter"]
 [connection signal="mob_turn" from="Player/Turn_Order" to="Player/Encounter_Screen01" method="_on_turn_order_mob_turn"]
+[connection signal="npc01_turn" from="Player/Turn_Order" to="." method="_on_turn_order_npc_01_turn"]
 [connection signal="player_turn" from="Player/Turn_Order" to="." method="_on_turn_order_player_turn"]
 [connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_attack_1"]
 [connection signal="healer_turn_over" from="Player/BattleScreen" to="." method="_on_battle_screen_healer_turn_over"]

@@ -5,6 +5,7 @@ signal nextTarget
 signal prevTarget
 signal player_turn_end
 signal healer_turn_over
+var active_character = 0
 var inBossFight = false
 var players = []
 var attack01_player = Button.new()
@@ -18,8 +19,9 @@ var costArray_npc01 = [atk01Cost_npc01]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	createPlayer_Atks()
+	createNpc01_atk()
 	players.append($Panel/Player_base)
-	players.append($Panel/npc_01)
+	players.append($Panel/Npc01)
 
 func createPlayer_Atks():
 	atk01Cost_player = $Panel/Player_base/Job/CharacterSkill.get_child(0).mpCost 
@@ -34,13 +36,14 @@ func createNpc01_atk():
 	attack01_npc01.text = $Panel/Npc01/Job/CharacterSkill.get_child(0).name + "  MP : " + str(atk01Cost_npc01)
 	attack01_npc01.set_position(Vector2(20,20))
 	attack01_npc01.set_size(Vector2(80,20))
-	$Panel/Attacks_Healer.add_child(attack01_player)
+	$Panel/Attacks_Healer.add_child(attack01_npc01)
 	attack01_npc01.connect("pressed", on_Npc01_attack01_pressed)
 
 func on_attack01_pressed():
 	var atk01Pow = $Panel/Player_base/Job/CharacterSkill.get_child(0).power
 	var playerAtk = $Panel/Player_base/Job/Stats.get_atk()
 	var totalDmg = atk01Pow + playerAtk
+	active_character = 1
 	emit_signal("attack1", atk01Cost_player,totalDmg)
 	player_turns_over()
 
@@ -48,6 +51,7 @@ func on_Npc01_attack01_pressed():
 	var atk01Pow = $Panel/Npc01/Job/CharacterSkill.get_child(0).power
 	var playerAtk = $Panel/Npc01/Job/Stats.get_atk()
 	var totalDmg = atk01Pow + playerAtk
+	active_character = 0
 	emit_signal("attack1", atk01Cost_player,totalDmg)
 	healer_turns_over()
 
@@ -78,6 +82,7 @@ func display_combat():
 	$Panel/Guard.visible = true
 	$Panel/Target_left.visible = true
 	$Panel/Target_right.visible = true
+	$Panel/ActiveTurnPlayer.visible = true
 
 func command_disable():
 	$Panel/Attack.visible = false
@@ -87,6 +92,8 @@ func command_disable():
 	$Panel/Attacks_Healer.visible = false
 	$Panel/Target_left.visible = false
 	$Panel/Target_right.visible = false
+	$Panel/ActiveTurnPlayer.visible = false
+	$Panel/ActiveTurnNpc01.visible = false
 
 func healer_turn():
 	$Panel/Attacks_Healer.visible = true
@@ -95,9 +102,13 @@ func healer_turn():
 	$Panel/Guard.visible = true
 	$Panel/Target_left.visible = true
 	$Panel/Target_right.visible = true
+	$Panel/ActiveTurnNpc01.visible = true
 
 func _on_attack_pressed():
-	$Panel/Attacks_Player.visible = !$Panel/Attacks_Player.visible
+	if active_character == 0:
+		$Panel/Attacks_Player.visible = !$Panel/Attacks_Player.visible
+	elif active_character == 1:
+		$Panel/Attacks_Healer.visible = !$Panel/Attacks_Healer.visible
 
 func player_dmg_taken(dmg:int):
 	$Panel/Player_base.DmgTakenPhys(dmg)
@@ -124,3 +135,11 @@ func _on_level_resting():
 # game over
 func _on_player_base_died(BaseFighter):
 	pass # Replace with function body.
+
+
+
+func _on_mending_light_pressed():
+	$Panel/Player_base.healing(10)
+	$Panel/Npc01.healing(10)
+	$Panel/Npc01.skillUsed(2)
+	healer_turns_over()

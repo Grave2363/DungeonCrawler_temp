@@ -71,3 +71,7 @@ func _on_leave_no_pressed():
 
 func _on_battle_screen_healer_turn_over():
 	$Player/BattleScreen.command_disable()
+
+
+func _on_turn_order_npc_01_turn():
+	$Player/BattleScreen.healer_turn()

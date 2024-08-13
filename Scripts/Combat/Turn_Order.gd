@@ -1,5 +1,6 @@
 extends Node
 signal player_turn
+signal npc01_turn
 signal mob_turn
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,7 @@ func _process(delta):
 	pass
 
 func _on_battle_screen_player_turn_end():
-	pass
-	#emit_signal("mob_turn")
+	emit_signal("npc01_turn")
 
 
 func _on_encounter_screen_mob_turn_end():
@@ -19,4 +19,4 @@ func _on_encounter_screen_mob_turn_end():
 
 
 func _on_battle_screen_healer_turn_over():
-	pass # Replace with function body.
+	emit_signal("mob_turn")

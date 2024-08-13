@@ -72,6 +72,14 @@ offset_top = -136.0
 offset_right = 1125.0
 offset_bottom = -8.0
 
+[node name="Mending Light" type="Button" parent="Panel/Attacks_Healer"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 319.0
+offset_bottom = 51.0
+text = "Mending Light MP : 2"
+
 [node name="Target_right" type="Button" parent="Panel"]
 visible = false
 layout_mode = 0
@@ -96,17 +104,28 @@ position = Vector2(335, 92)
 [node name="Npc01" parent="Panel" instance=ExtResource("3_i4iyf")]
 position = Vector2(469, 92)
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+[node name="ActiveTurnPlayer" type="RichTextLabel" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 297.0
 offset_top = 47.0
 offset_right = 392.0
 offset_bottom = 94.0
-text = "Active Turn Temp"
+text = "Active Turn"
+
+[node name="ActiveTurnNpc01" type="RichTextLabel" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 429.0
+offset_top = 49.0
+offset_right = 524.0
+offset_bottom = 96.0
+text = "Active Turn"
 
 [connection signal="attack1" from="." to="Panel/Player_base" method="_on_battle_screen_attack_1"]
 [connection signal="pressed" from="Panel/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Panel/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="Panel/Attacks_Healer/Mending Light" to="." method="_on_mending_light_pressed"]
 [connection signal="pressed" from="Panel/Target_right" to="." method="_on_target_right_pressed"]
 [connection signal="pressed" from="Panel/Target_left" to="." method="_on_target_left_pressed"]
 [connection signal="died" from="Panel/Player_base" to="." method="_on_player_base_died"]
