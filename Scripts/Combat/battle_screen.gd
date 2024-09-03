@@ -71,6 +71,7 @@ func battleWon(xp):
 func _on_run_pressed():
 	if inBossFight == false:
 		emit_signal("running")
+		active_character = 0
 		command_disable()
 
 func BossFight(fight : bool):
@@ -143,3 +144,9 @@ func _on_mending_light_pressed():
 	$Panel/Npc01.healing(10)
 	$Panel/Npc01.skillUsed(2)
 	healer_turns_over()
+
+
+
+func _on_turn_order_reset_player():
+	command_disable()
+	active_character = 0
