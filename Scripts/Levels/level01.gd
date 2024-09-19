@@ -4,7 +4,6 @@ signal resting
 # boss fight toggle, mainly for testing as player will not return
 var bossFought = false
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -12,6 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
 
 func new_encounter():
 	$Player/Encounter_Screen01.visible = !$Player/Encounter_Screen01.visible
@@ -75,3 +75,4 @@ func _on_battle_screen_healer_turn_over():
 
 func _on_turn_order_npc_01_turn():
 	$Player/BattleScreen.healer_turn()
+

@@ -145,7 +145,6 @@ func _on_turn_order_mob_turn():
 		emit_signal("mob_atk", mob.dmg_calc()) 
 		var temp = mob.get_mob_name()
 		var dmgTemp = mob.dmg_calc()
-		$CombatDialouge.text = str(temp)  + " inflicted " +  str(dmgTemp) + " damage to player"
 		await get_tree().create_timer(1.0).timeout
 	emit_signal("mob_turn_end")
 
@@ -167,3 +166,7 @@ func _on_level_boss_fight():
 	$Panel.add_child(fighter01)
 	mobs.append(fighter01)
 	emit_signal("boss_fight_activated")
+
+
+func _on_battle_screen_display_text(text):
+	$CombatDialouge.text = text

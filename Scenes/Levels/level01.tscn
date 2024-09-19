@@ -1006,6 +1006,7 @@ text = "[center]NO[center]"
 [connection signal="player_turn" from="Player/Turn_Order" to="." method="_on_turn_order_player_turn"]
 [connection signal="resetPlayer" from="Player/Turn_Order" to="Player/BattleScreen" method="_on_turn_order_reset_player"]
 [connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_attack_1"]
+[connection signal="displayText" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_display_text"]
 [connection signal="healer_turn_over" from="Player/BattleScreen" to="." method="_on_battle_screen_healer_turn_over"]
 [connection signal="healer_turn_over" from="Player/BattleScreen" to="Player/Turn_Order" method="_on_battle_screen_healer_turn_over"]
 [connection signal="nextTarget" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_next_target"]

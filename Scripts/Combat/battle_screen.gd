@@ -5,6 +5,8 @@ signal nextTarget
 signal prevTarget
 signal player_turn_end
 signal healer_turn_over
+signal displayText(text)
+var rng = RandomNumberGenerator.new()
 var active_character = 0
 var inBossFight = false
 var players = []
@@ -114,6 +116,9 @@ func _on_attack_pressed():
 func player_dmg_taken(dmg:int):
 	$Panel/Player_base.DmgTakenPhys(dmg)
 
+func Npc01_dmg_taken(dmg:int):
+	$Panel/Npc01.DmgTakenPhys(dmg)
+
 func _on_target_right_pressed():
 	emit_signal("nextTarget")
 
@@ -127,11 +132,28 @@ func _on_chests_wep_change(new_wep):
 
 
 func _on_encounter_screen_mob_atk(dmg):
-	player_dmg_taken(dmg)
+	var atkTarget = rng.randf_range(0, 40)
+	if atkTarget < 20:
+		emit_signal("displayText", "Player took " + str(dmg) + " Damage"  ) 
+		var atkHit = rng.randf_range(0, 100)
+		var temp =$Panel/Player_base/Job/Stats.get_spd() + 25
+		if atkHit > temp:
+			player_dmg_taken(dmg)
+		else :
+			emit_signal("displayText", "Player eveded attack") 
+	else :
+		emit_signal("displayText",  "NPC_Healer took " + str(dmg) + " Damage" )
+		var atkHit = rng.randf_range(0, 100)
+		var temp =$Panel/Npc01/Job/Stats.get_spd() + 25 
+		if atkHit > temp:
+			Npc01_dmg_taken(dmg)
+		else :
+			emit_signal("displayText","Player eveded attack" )
 
 
 func _on_level_resting():
 	$Panel/Player_base.fullHeal()
+	$Panel/Npc01.fullHeal()
 
 # game over
 func _on_player_base_died(BaseFighter):
