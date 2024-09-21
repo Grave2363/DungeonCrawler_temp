@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://b0526vcjeuba5"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_mmcfx"]
+
+[resource]
+script = ExtResource("1_mmcfx")
+skillName = "Rampagers Strikes"
+skillDis = "Having embraced Rage you strike out at your foes"
+dmgType = "Physical"
+level_unlock = 0
+healing = 0
+mpCost = 5
+power = 10
+hitChance = 0
+targetable = false

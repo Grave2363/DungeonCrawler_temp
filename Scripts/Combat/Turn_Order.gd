@@ -15,19 +15,23 @@ func _process(delta):
 
 
 func _on_battle_screen_player_turn_end():
-	emit_signal("npc01_turn")
+	
 	if combatOver == true:
 		emit_signal("player_turn")
 		emit_signal("resetPlayer")
 		combatOver = false
+	else:
+		emit_signal("npc01_turn")
 
 
 func _on_encounter_screen_mob_turn_end():
-	emit_signal("player_turn")
+	
 	if combatOver == true:
 		emit_signal("player_turn")
 		emit_signal("resetPlayer")
 		combatOver = false
+	else :
+		emit_signal("player_turn")
 
 
 func _on_battle_screen_healer_turn_over():

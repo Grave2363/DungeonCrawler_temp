@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4cqk3qwt5qyh"]
+[gd_scene load_steps=23 format=3 uid="uid://b4cqk3qwt5qyh"]
 
 [ext_resource type="Script" path="res://Scripts/Combat/BaseFighter.gd" id="1_uyast"]
 [ext_resource type="PackedScene" uid="uid://de3mo8qfb1lge" path="res://Scenes/shared/Job.tscn" id="2_2eohw"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://biml4icvfhe2r" path="res://icon.svg" id="5_3fipe"]
 [ext_resource type="Resource" uid="uid://bb0clwfeudf15" path="res://Scripts/weps/Sword.tres" id="5_i22ks"]
 [ext_resource type="PackedScene" uid="uid://ewnp1u85plnv" path="res://Scenes/shared/char_item.tscn" id="7_ooqlj"]
+[ext_resource type="Resource" uid="uid://ciavj3wyh65qb" path="res://Scripts/Player Attacks/TemperedGuard.tres" id="7_pug57"]
+[ext_resource type="Resource" uid="uid://b0526vcjeuba5" path="res://Scripts/Player Attacks/RampagingStrikes.tres" id="8_5x2fs"]
 [ext_resource type="PackedScene" path="res://Scenes/shared/Weapons.tscn" id="9_nwu3e"]
 [ext_resource type="Resource" uid="uid://cok4mpid2vrt0" path="res://Scripts/PlayerArmor/BasicChest.tres" id="9_rx5j0"]
 [ext_resource type="Resource" uid="uid://cgy03lt8g0jlu" path="res://Scripts/PlayerArmor/BasicBoots.tres" id="10_wvr0k"]
@@ -37,7 +39,7 @@ growths = ExtResource("4_uck02")
 
 [node name="Job" parent="." instance=ExtResource("2_2eohw")]
 startingStats = ExtResource("3_fh3eh")
-StartingSkills = [ExtResource("3_otcq3")]
+StartingSkills = [ExtResource("3_otcq3"), ExtResource("7_pug57"), ExtResource("8_5x2fs")]
 characterSkillScene = ExtResource("4_oom2w")
 equipedWep = ExtResource("5_i22ks")
 equipedItem = ExtResource("2_7aq14")

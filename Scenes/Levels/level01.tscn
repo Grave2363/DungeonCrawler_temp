@@ -930,6 +930,40 @@ offset_bottom = 37.0
 bbcode_enabled = true
 text = "[center]NO[center]"
 
+[node name="ChoicePopUp" type="CanvasLayer" parent="Player"]
+visible = false
+
+[node name="Panel" type="Panel" parent="Player/ChoicePopUp"]
+offset_left = 238.0
+offset_top = 229.0
+offset_right = 873.0
+offset_bottom = 423.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player/ChoicePopUp/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 30.0
+offset_right = 635.0
+offset_bottom = 97.0
+bbcode_enabled = true
+text = "[center]From the Great Beasts corpse rises an abyssal flame
+Would you Embrace it or Purify it?[center]"
+
+[node name="Purify" type="Button" parent="Player/ChoicePopUp/Panel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 99.0
+offset_right = 227.0
+offset_bottom = 155.0
+text = "Purify"
+
+[node name="Embrace" type="Button" parent="Player/ChoicePopUp/Panel"]
+offset_left = 413.0
+offset_top = 100.0
+offset_right = 544.0
+offset_bottom = 156.0
+text = "Embrace"
+
 [node name="Chests" type="Node3D" parent="."]
 script = ExtResource("8_rlpak")
 
@@ -994,6 +1028,7 @@ offset_bottom = 37.0
 bbcode_enabled = true
 text = "[center]NO[center]"
 
+[connection signal="boss01ChoiceMade" from="." to="Player/BattleScreen" method="_on_level_boss_01_choice_made"]
 [connection signal="bossFight" from="." to="Player" method="_on_level_boss_fight"]
 [connection signal="bossFight" from="." to="Player/Encounter_Screen01" method="_on_level_boss_fight"]
 [connection signal="resting" from="." to="Player/BattleScreen" method="_on_level_resting"]
@@ -1006,6 +1041,7 @@ text = "[center]NO[center]"
 [connection signal="player_turn" from="Player/Turn_Order" to="." method="_on_turn_order_player_turn"]
 [connection signal="resetPlayer" from="Player/Turn_Order" to="Player/BattleScreen" method="_on_turn_order_reset_player"]
 [connection signal="attack1" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_attack_1"]
+[connection signal="attack2" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_attack_2"]
 [connection signal="displayText" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_display_text"]
 [connection signal="healer_turn_over" from="Player/BattleScreen" to="." method="_on_battle_screen_healer_turn_over"]
 [connection signal="healer_turn_over" from="Player/BattleScreen" to="Player/Turn_Order" method="_on_battle_screen_healer_turn_over"]
@@ -1014,6 +1050,7 @@ text = "[center]NO[center]"
 [connection signal="player_turn_end" from="Player/BattleScreen" to="Player/Turn_Order" method="_on_battle_screen_player_turn_end"]
 [connection signal="prevTarget" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_prev_target"]
 [connection signal="running" from="Player/BattleScreen" to="Player/Encounter_Screen01" method="_on_battle_screen_running"]
+[connection signal="bossDead" from="Player/Encounter_Screen01" to="." method="_on_encounter_screen_01_boss_dead"]
 [connection signal="boss_fight_activated" from="Player/Encounter_Screen01" to="." method="_on_encounter_screen_01_boss_fight_activated"]
 [connection signal="endCombat" from="Player/Encounter_Screen01" to="Player" method="_on_encounter_screen_end_combat"]
 [connection signal="endCombat" from="Player/Encounter_Screen01" to="Player/Turn_Order" method="_on_encounter_screen_01_end_combat"]
@@ -1022,6 +1059,8 @@ text = "[center]NO[center]"
 [connection signal="playerRan" from="Player/Encounter_Screen01" to="Player" method="_on_encounter_screen_player_ran"]
 [connection signal="pressed" from="Player/RestPopup/Panel/Rest_Yes" to="." method="_on_rest_yes_pressed"]
 [connection signal="pressed" from="Player/RestPopup/Panel/Rest_No" to="." method="_on_rest_no_pressed"]
+[connection signal="pressed" from="Player/ChoicePopUp/Panel/Purify" to="." method="_on_purify_pressed"]
+[connection signal="pressed" from="Player/ChoicePopUp/Panel/Embrace" to="." method="_on_embrace_pressed"]
 [connection signal="Wep_change" from="Chests" to="Player/BattleScreen" method="_on_chests_wep_change"]
 [connection signal="Chest_Opened" from="Chests/Chest" to="Chests" method="_on_chest_chest_opened"]
 [connection signal="popupRest" from="Points of Rest" to="." method="_on_points_of_rest_popup_rest"]

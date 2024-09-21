@@ -2,6 +2,7 @@ extends CanvasLayer
 
 signal endCombat
 signal playerRan
+signal bossDead
 signal mob_turn_end
 signal mob_atk (dmg:int)
 signal boss_fight_activated
@@ -11,6 +12,7 @@ const boss_01: PackedScene = preload("res://Scenes/Battle/Bosses/Boss01.tscn")
 var fighter01 
 var fighter02
 var fighter03
+var bossFight = 0
 var size
 var target
 var mobs = []
@@ -81,6 +83,8 @@ func get_xp():
 	return mobXP
 
 func _on_mob_base_dead():
+	if bossFight == 1:
+		emit_signal("bossDead")
 	emit_signal("endCombat")
 	$Panel.get_child(0).queue_free()
 	mobs.remove_at(0)
@@ -135,9 +139,14 @@ func _on_battle_screen_prev_target():
 	else :
 		target = target - 1
 
-
+# st
 func _on_battle_screen_attack_1(mp: int, dmg: int):
 	mobs[target].takingDmg(dmg)
+
+#aoe
+func _on_battle_screen_attack_2(mp, dmg):
+	for m in mobs:
+		m.takingDmg(dmg)
 
 
 func _on_turn_order_mob_turn():
@@ -151,6 +160,7 @@ func _on_turn_order_mob_turn():
 
 func _on_level_boss_fight():
 	var x = 0
+	bossFight = 1
 	var temp = mobs.size()
 	while x < temp:
 		$Panel.get_child(x).queue_free()
@@ -170,3 +180,5 @@ func _on_level_boss_fight():
 
 func _on_battle_screen_display_text(text):
 	$CombatDialouge.text = text
+
+

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://ciavj3wyh65qb"]
+
+[ext_resource type="Script" path="res://Scripts/skills/Skill.gd" id="1_kl5xp"]
+
+[resource]
+script = ExtResource("1_kl5xp")
+skillName = "Tempered Guard"
+skillDis = "Having been tested in fire, you guard your party to reduce incoming damage"
+dmgType = "Physical"
+level_unlock = 0
+healing = 0
+mpCost = 2
+power = 0
+hitChance = 0
+targetable = false

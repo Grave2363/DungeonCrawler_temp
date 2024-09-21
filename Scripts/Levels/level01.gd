@@ -1,6 +1,7 @@
 extends Node3D
 signal bossFight
 signal resting
+signal boss01ChoiceMade(choice)
 # boss fight toggle, mainly for testing as player will not return
 var bossFought = false
 
@@ -76,3 +77,17 @@ func _on_battle_screen_healer_turn_over():
 func _on_turn_order_npc_01_turn():
 	$Player/BattleScreen.healer_turn()
 
+
+
+func _on_purify_pressed():
+	emit_signal("boss01ChoiceMade", 1)
+	$Player/ChoicePopUp.visible = false
+
+
+func _on_embrace_pressed():
+	emit_signal("boss01ChoiceMade", 2)
+	$Player/ChoicePopUp.visible = false
+
+
+func _on_encounter_screen_01_boss_dead():
+	$Player/ChoicePopUp.visible = true 
