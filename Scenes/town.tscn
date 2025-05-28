@@ -30,6 +30,7 @@ layout_mode = 2
 text = "Market"
 
 [node name="Black Market" type="Button" parent="CanvasLayer/Top Menu"]
+visible = false
 layout_mode = 2
 text = "Black Market"
 
@@ -47,6 +48,10 @@ text = "Armorer"
 layout_mode = 2
 text = "Weapon Smith"
 
+[node name="Market Back" type="Button" parent="CanvasLayer/Market Menu"]
+layout_mode = 2
+text = "back"
+
 [node name="DungeonLevels" type="VBoxContainer" parent="CanvasLayer"]
 visible = false
 offset_right = 391.0
@@ -58,12 +63,18 @@ layout_mode = 2
 text = "Area 1"
 
 [node name="Area2" type="Button" parent="CanvasLayer/DungeonLevels"]
+visible = false
 layout_mode = 2
 text = "Area 2"
 
 [node name="Area 3" type="Button" parent="CanvasLayer/DungeonLevels"]
+visible = false
 layout_mode = 2
 text = "Area 3"
+
+[node name="Dungeon Back" type="Button" parent="CanvasLayer/DungeonLevels"]
+layout_mode = 2
+text = "Back"
 
 [node name="AreaLevelSelect" type="VBoxContainer" parent="CanvasLayer"]
 visible = false
@@ -78,18 +89,22 @@ layout_mode = 2
 text = "Entrance"
 
 [node name="CP1" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+visible = false
 layout_mode = 2
 text = "Check Point 1"
 
 [node name="CP2" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+visible = false
 layout_mode = 2
 text = "Check Point 2"
 
 [node name="CP3" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+visible = false
 layout_mode = 2
 text = "Check Point 3"
 
 [node name="BossCP" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+visible = false
 layout_mode = 2
 text = "Check Point 4"
 
@@ -99,9 +114,11 @@ text = "Check Point 4"
 [connection signal="pressed" from="CanvasLayer/Top Menu/Black Market" to="." method="_on_black_market_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market Menu/Armorer" to="." method="_on_armorer_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market Menu/WepSmith" to="." method="_on_wep_smith_pressed"]
+[connection signal="pressed" from="CanvasLayer/Market Menu/Market Back" to="." method="_on_market_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/DungeonLevels/Area1" to="." method="_on_area_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/DungeonLevels/Area2" to="." method="_on_area_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/DungeonLevels/Area 3" to="." method="_on_area_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/DungeonLevels/Dungeon Back" to="." method="_on_dungeon_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/AreaLevelSelect/Entrance" to="." method="_on_entrance_pressed"]
 [connection signal="pressed" from="CanvasLayer/AreaLevelSelect/CP1" to="." method="_on_cp_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/AreaLevelSelect/CP2" to="." method="_on_cp_2_pressed"]
