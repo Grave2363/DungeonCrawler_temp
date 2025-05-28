@@ -6,9 +6,15 @@ var dungeon = 0
 var cpSel = 0
 #dungeons unlocked
 var availableDungeons = 0
+#weather the player has found the hiden market
+var hiddenMarket = 0
+#CP unlocked
+var cp_active = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	hiddenMarket = Globals.getHM()
+	availableDungeons = Globals.getAD()
+	cp_active = Globals.getCPA()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,6 +53,10 @@ func _on_armorer_pressed():
 	pass # Replace with function body.
 
 
+func _on_potion_shop_pressed():
+	pass # Replace with function body.
+
+
 func _on_wep_smith_pressed():
 	pass # Replace with function body.
 
@@ -54,18 +64,76 @@ func _on_wep_smith_pressed():
 func _on_area_1_pressed():
 	$CanvasLayer/AreaLevelSelect.visible = true
 	dungeon = 0
+	match cp_active:
+		0:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = false
+			$CanvasLayer/AreaLevelSelect/CP2.visible = false
+			$CanvasLayer/AreaLevelSelect/CP3.visible = false
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = false
+		1:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+		2:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+		3:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+		4,5,6,7,8,9,10,11,12,13,14:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = true
 
 #second dungeon not implemented 
 func _on_area_2_pressed():
 	$CanvasLayer/AreaLevelSelect.visible = true
-	pass
 	dungeon = 1
+	match cp_active:
+		5:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = false
+			$CanvasLayer/AreaLevelSelect/CP2.visible = false
+			$CanvasLayer/AreaLevelSelect/CP3.visible = false
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = false
+		6:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+		7:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+		8:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+		9,10,11,12,13,14:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = true
 
 #Third dungeon not implemnted
 func _on_area_3_pressed():
 	$CanvasLayer/AreaLevelSelect.visible = true
-	pass
 	dungeon = 2
+	match cp_active:
+		10:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = false
+			$CanvasLayer/AreaLevelSelect/CP2.visible = false
+			$CanvasLayer/AreaLevelSelect/CP3.visible = false
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = false
+		11:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+		12:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+		13:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+		14:
+			$CanvasLayer/AreaLevelSelect/CP1.visible = true
+			$CanvasLayer/AreaLevelSelect/CP2.visible = true
+			$CanvasLayer/AreaLevelSelect/CP3.visible = true
+			$CanvasLayer/AreaLevelSelect/BossCP.visible = true
 
 
 func _on_entrance_pressed():
@@ -139,3 +207,4 @@ func enterDungeon():
 				4:
 					pass
 	
+

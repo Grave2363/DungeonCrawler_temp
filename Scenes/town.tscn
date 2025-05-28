@@ -48,6 +48,10 @@ text = "Armorer"
 layout_mode = 2
 text = "Weapon Smith"
 
+[node name="PotionShop" type="Button" parent="CanvasLayer/Market Menu"]
+layout_mode = 2
+text = "Apothecary"
+
 [node name="Market Back" type="Button" parent="CanvasLayer/Market Menu"]
 layout_mode = 2
 text = "back"
@@ -114,6 +118,7 @@ text = "Check Point 4"
 [connection signal="pressed" from="CanvasLayer/Top Menu/Black Market" to="." method="_on_black_market_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market Menu/Armorer" to="." method="_on_armorer_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market Menu/WepSmith" to="." method="_on_wep_smith_pressed"]
+[connection signal="pressed" from="CanvasLayer/Market Menu/PotionShop" to="." method="_on_potion_shop_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market Menu/Market Back" to="." method="_on_market_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/DungeonLevels/Area1" to="." method="_on_area_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/DungeonLevels/Area2" to="." method="_on_area_2_pressed"]

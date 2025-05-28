@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/level_block/plugin.cfg")
