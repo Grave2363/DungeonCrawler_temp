@@ -63,6 +63,7 @@ func _on_next_area_area_entered(area):
 
 func _on_leave_yes_pressed():
 	$LeaveArea.visible = false
+	#todo change to next floor
 	get_tree().change_scene_to_file("res://Scenes/Levels/Test_Room.tscn")
 
 
@@ -91,3 +92,16 @@ func _on_embrace_pressed():
 
 func _on_encounter_screen_01_boss_dead():
 	$Player/ChoicePopUp.visible = true 
+
+
+func _on_remain_pressed():
+	$Player/LeavePopUp.visible = false 
+
+
+func _on_exit_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/town.tscn")
+
+
+func _on_to_town_area_entered(area):
+	$Player/LeavePopUp.visible = true 
+	
