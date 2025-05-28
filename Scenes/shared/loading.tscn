@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d65qa88gocyc"]
+
+[node name="Loading" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1164.0
+offset_bottom = 661.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)

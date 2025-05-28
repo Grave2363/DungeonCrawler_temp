@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3 uid="uid://dulcwdaapushx"]
+
+[ext_resource type="Script" path="res://Scripts/town.gd" id="1_glt3b"]
+
+[node name="Town" type="Node2D"]
+script = ExtResource("1_glt3b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Top Menu" type="VBoxContainer" parent="CanvasLayer"]
+offset_top = 2.0
+offset_right = 385.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="Church" type="Button" parent="CanvasLayer/Top Menu"]
+layout_mode = 2
+text = "Church"
+
+[node name="Dungeon" type="Button" parent="CanvasLayer/Top Menu"]
+layout_mode = 2
+text = "Dungeon"
+
+[node name="Market" type="Button" parent="CanvasLayer/Top Menu"]
+layout_mode = 2
+text = "Market"
+
+[node name="Black Market" type="Button" parent="CanvasLayer/Top Menu"]
+layout_mode = 2
+text = "Black Market"
+
+[node name="Market Menu" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_right = 386.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="Armorer" type="Button" parent="CanvasLayer/Market Menu"]
+layout_mode = 2
+text = "Armorer"
+
+[node name="WepSmith" type="Button" parent="CanvasLayer/Market Menu"]
+layout_mode = 2
+text = "Weapon Smith"
+
+[node name="DungeonLevels" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_right = 391.0
+offset_bottom = 646.0
+alignment = 1
+
+[node name="Area1" type="Button" parent="CanvasLayer/DungeonLevels"]
+layout_mode = 2
+text = "Area 1"
+
+[node name="Area2" type="Button" parent="CanvasLayer/DungeonLevels"]
+layout_mode = 2
+text = "Area 2"
+
+[node name="Area 3" type="Button" parent="CanvasLayer/DungeonLevels"]
+layout_mode = 2
+text = "Area 3"
+
+[node name="AreaLevelSelect" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 393.0
+offset_top = 1.0
+offset_right = 720.0
+offset_bottom = 645.0
+alignment = 1
+
+[node name="Entrance" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+layout_mode = 2
+text = "Entrance"
+
+[node name="CP1" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+layout_mode = 2
+text = "Check Point 1"
+
+[node name="CP2" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+layout_mode = 2
+text = "Check Point 2"
+
+[node name="CP3" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+layout_mode = 2
+text = "Check Point 3"
+
+[node name="BossCP" type="Button" parent="CanvasLayer/AreaLevelSelect"]
+layout_mode = 2
+text = "Check Point 4"
+
+[connection signal="pressed" from="CanvasLayer/Top Menu/Church" to="." method="_on_church_pressed"]
+[connection signal="pressed" from="CanvasLayer/Top Menu/Dungeon" to="." method="_on_dungeon_pressed"]
+[connection signal="pressed" from="CanvasLayer/Top Menu/Market" to="." method="_on_market_pressed"]
+[connection signal="pressed" from="CanvasLayer/Top Menu/Black Market" to="." method="_on_black_market_pressed"]
+[connection signal="pressed" from="CanvasLayer/Market Menu/Armorer" to="." method="_on_armorer_pressed"]
+[connection signal="pressed" from="CanvasLayer/Market Menu/WepSmith" to="." method="_on_wep_smith_pressed"]
+[connection signal="pressed" from="CanvasLayer/DungeonLevels/Area1" to="." method="_on_area_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/DungeonLevels/Area2" to="." method="_on_area_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/DungeonLevels/Area 3" to="." method="_on_area_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/AreaLevelSelect/Entrance" to="." method="_on_entrance_pressed"]
+[connection signal="pressed" from="CanvasLayer/AreaLevelSelect/CP1" to="." method="_on_cp_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/AreaLevelSelect/CP2" to="." method="_on_cp_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/AreaLevelSelect/CP3" to="." method="_on_cp_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/AreaLevelSelect/BossCP" to="." method="_on_boss_cp_pressed"]

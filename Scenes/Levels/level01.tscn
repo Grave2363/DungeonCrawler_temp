@@ -958,6 +958,7 @@ offset_bottom = 155.0
 text = "Purify"
 
 [node name="Embrace" type="Button" parent="Player/ChoicePopUp/Panel"]
+layout_mode = 0
 offset_left = 413.0
 offset_top = 100.0
 offset_right = 544.0
