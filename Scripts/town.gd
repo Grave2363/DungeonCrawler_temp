@@ -208,3 +208,11 @@ func enterDungeon():
 					pass
 	
 
+
+
+func _on_armor_upgrade_pressed():
+	pass # Replace with function body.
+
+
+func _on_armorbuy_pressed():
+	pass # Replace with function body.

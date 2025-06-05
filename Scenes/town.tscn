@@ -11,7 +11,21 @@ script = ExtResource("1_glt3b")
 offset_right = 1152.0
 offset_bottom = 648.0
 
+[node name="ArmorerShop" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 394.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="Armorbuy" type="Button" parent="CanvasLayer/ArmorerShop"]
+layout_mode = 2
+text = "Shop"
+
+[node name="ArmorUpgrade" type="Button" parent="CanvasLayer/ArmorerShop"]
+layout_mode = 2
+text = "Upgrade"
+
 [node name="Top Menu" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
 offset_top = 2.0
 offset_right = 385.0
 offset_bottom = 647.0
@@ -112,6 +126,30 @@ visible = false
 layout_mode = 2
 text = "Check Point 4"
 
+[node name="Dialouge" type="Panel" parent="CanvasLayer"]
+offset_left = 4.0
+offset_top = 401.0
+offset_right = 1147.0
+offset_bottom = 646.0
+
+[node name="NameLabel" type="RichTextLabel" parent="CanvasLayer/Dialouge"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 1146.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "Temp speaker"
+
+[node name="Speech" type="RichTextLabel" parent="CanvasLayer/Dialouge"]
+layout_mode = 0
+offset_top = 34.0
+offset_right = 1141.0
+offset_bottom = 242.0
+text = "Temp"
+
+[connection signal="pressed" from="CanvasLayer/ArmorerShop/Armorbuy" to="." method="_on_armorbuy_pressed"]
+[connection signal="pressed" from="CanvasLayer/ArmorerShop/ArmorUpgrade" to="." method="_on_armor_upgrade_pressed"]
 [connection signal="pressed" from="CanvasLayer/Top Menu/Church" to="." method="_on_church_pressed"]
 [connection signal="pressed" from="CanvasLayer/Top Menu/Dungeon" to="." method="_on_dungeon_pressed"]
 [connection signal="pressed" from="CanvasLayer/Top Menu/Market" to="." method="_on_market_pressed"]
